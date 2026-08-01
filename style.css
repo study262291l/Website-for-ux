@@ -440,18 +440,15 @@ main {
   color: #e8e8e8;
   padding: 40px 45px;
   display: grid;
-  grid-template-columns: 300px 1fr 280px;
-  gap: 30px;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 24px;
   align-items: center;
   border: 1px solid rgba(201, 162, 76, 0.25);
-}
-
-.tsGuideEyebrow {
-  display: block;
-  font-size: 11px;
-  letter-spacing: 4px;
-  color: var(--blue);
-  margin-bottom: 6px;
+  background-image: url("assets/type2.png");
+  box-shadow: 
+        0 30px 100px rgba(0, 0, 0, 0.8),
+        inset 0 0 80px rgba(6, 6, 8, 0.9),
+        inset 0 0 140px rgba(0, 0, 0, 0.95);
 }
 
 .tsTitle {
@@ -461,32 +458,73 @@ main {
   letter-spacing: 1px;
   color: #f2f2f2;
   line-height: 1;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.9), 0 2px 6px rgba(0, 0, 0, 0.65);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.6);
+  paint-order: stroke fill;
+}
+
+.tsGuideEyebrow {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--blue);
+  margin-bottom: 6px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9), 0 2px 4px rgba(0, 0, 0, 0.65);
+  -webkit-text-stroke: 0.6px rgba(0, 0, 0, 0.55);
+  paint-order: stroke fill;
 }
 
 .tsTitleType {
   color: var(--gold);
   font-size: 1.4em;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.9), 0 2px 6px rgba(0, 0, 0, 0.65);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.6);
+  paint-order: stroke fill;
 }
 
 .tsTitleSoul {
   color: var(--blue);
   font-size: 1.4em;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.9), 0 2px 6px rgba(0, 0, 0, 0.65);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.6);
+  paint-order: stroke fill;
 }
 
-.guidebook-text {
+.tsGuidePanel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, rgba(20, 24, 28, 0.55) 0%, rgba(8, 12, 16, 0.7) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 12px 35px rgba(0, 0, 0, 0.25);
+  max-width: 720px;
+  margin-left: 0;
+}
+
+.tsGuideMid {
+  padding: 0;
+}
+
+.tsGuideMidText {
   font-size: 13px;
   line-height: 1.7;
   color: #cfd2d6;
   font-family: sans-serif;
+  margin: 0;
 }
 
-.guidebook-links {
+.tsGuideLinks {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+  padding: 0;
 }
 
-.guidebook-link {
+.tsGuideLink {
   border: 1px solid var(--gold-soft);
   background: rgba(201, 162, 76, 0.06);
   color: var(--gold);
