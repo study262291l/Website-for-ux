@@ -432,7 +432,7 @@ main {
 /* ============================================================
    SECTION 1 — GUIDEBOOK
    ============================================================ */
-.guidebook-section {
+.typeSoulGuideSection {
   width: 95vw;
   max-width: 1200px;
   margin: 40px auto 0;
@@ -446,7 +446,7 @@ main {
   border: 1px solid rgba(201, 162, 76, 0.25);
 }
 
-.guidebook-eyebrow {
+.tsGuideEyebrow {
   display: block;
   font-size: 11px;
   letter-spacing: 4px;
@@ -454,7 +454,7 @@ main {
   margin-bottom: 6px;
 }
 
-.guidebook-word {
+.tsTitle {
   font-family: serif;
   font-weight: normal;
   font-size: 40px;
@@ -463,8 +463,13 @@ main {
   line-height: 1;
 }
 
-.guidebook-drop {
+.tsTitleType {
   color: var(--gold);
+  font-size: 1.4em;
+}
+
+.tsTitleSoul {
+  color: var(--blue);
   font-size: 1.4em;
 }
 
