@@ -6,10 +6,12 @@
 
 :root {
   --bg-color: #dcdfdc;
+  --bgBlack: #222;
   --panel-bg: #d4d8d4;
   --dark-accent: #3d423e;
   --green-accent: #879b84;
   --border-color: #abb0a9;
+  
 
   --ink: #15171b;
   --ink-soft: #24272c;
@@ -26,6 +28,8 @@ body {
   padding-bottom: 50px;
   display: flex;
   justify-content: center;
+  min-height: 100vh;
+  width: 100%;
   /* overflow: hidden; */
 }
 
@@ -45,7 +49,7 @@ body {
 }
 
 main {
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 10px 20px;
 }
@@ -151,108 +155,108 @@ main {
 
 /* HERO HEADER */
 .heroHeader {
-    width: 95vw;
-    height: 53.43vw; 
-    max-width: 1200px; 
-    max-height: 675px;
+    width: min(100%, 100vw);
+    min-height: 650px;
+    max-width: none;
     display: grid;
-    grid-template-columns: 45% 45%;
-    background-image: url("assets/type.png");
-    background-size: cover;
-    background-position: center;
+    grid-template-columns: 0.6fr 1.3fr;
     position: relative;
-
-    box-shadow: 
-        0 30px 100px rgba(0, 0, 0, 0.8),
-        inset 0 0 80px rgba(6, 6, 8, 0.9),
-        inset 0 0 140px rgba(0, 0, 0, 0.95);
-
+    overflow: hidden;
+    border: 1px solid rgba(201, 162, 76, 0.25);
+    box-shadow: 0 30px 100px rgba(0, 0, 0, 0.8);
 }
 
 .heroLeft {
-    padding: 5% 7%;
+    padding: clamp(32px, 4vw, 72px) clamp(28px, 4vw, 64px) clamp(24px, 3vw, 42px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
     z-index: 5;
-    background: linear-gradient(90deg, rgba(6, 6, 8, 0.98) 0%, rgba(70, 3, 3, 0.65) 75%, rgba(0, 0, 0, 0) 100%);
+    background-image: url("assets/subtle-grunge.png");
+    background-color: #1f1e1e;
+    background-blend-mode: soft-light;
+    color: #ddd;
+    gap: 30px;
 }
 
-  .heroHeaderText {
-      font-size: 0.75rem;
-      font-weight: 900;
-      color: #cbd5e1;
-      letter-spacing: 2px;
-      line-height: 1.5;
-      text-transform: uppercase;
-      /* border-left: 3px solid #81b1ed; */
-      padding-left: 10px;
-      padding-top: 15px;
-  }
+.heroHeaderText {
+    font-size: 0.74rem;
+    font-weight: 900;
+    color: #e8eef5;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    padding-left: 0;
+    padding-top: 0;
+    max-width: 380px;
+}
 
-  .heroHeaderText2 {
-      font-size: 0.65rem;
-      color: #8492a6;
-      display: block;
-      margin-top: 4px;
-      letter-spacing: 1px;
-  }
+.heroHeaderText2 {
+    font-size: 0.64rem;
+    color: #9bb0c2;
+    display: block;
+    margin-top: 4px;
+    letter-spacing: 1px;
+}
 
 .heroTexts {
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  margin-top: 150px;
+  margin: 0 0 12px 0;
+  max-width: 500px;
 }
 
 .heroSubText {
   font-size: 13px;
   letter-spacing: 6px;
   text-transform: lowercase;
-  color: rgb(132, 164, 232);
+  color: #8fc4e0;
   margin-bottom: 10px;
-  margin-right: 250px;
+  margin-left: 2px;
 }
 
 .heroTitle {
   font-family: serif;
-  font-size: 68px;
+  font-size: clamp(44px, 5.8vw, 84px);
   font-weight: normal;
   letter-spacing: 2px;
-  color: rgb(249, 249, 249);
-  line-height: 1;
-  margin-bottom: 15px;
+  color: #f7f7f2;
+  line-height: 0.95;
+  margin-bottom: 12px;
 }
 
 .heroDesc {
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 2px;
-  color: rgb(228, 122, 89);
-  white-space: nowrap;
-  padding-left: 50px;
+  color: #c9a24c;
+  white-space: normal;
+  padding-left: 0;
+  text-transform: uppercase;
 }
 
 .heroFooter {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
     padding-top: 15px;
+    margin-top: 8px;
 }
 
 .heroFooterText {
     font-size: 0.65rem;
-    color: #475569;
+    color: #7a8792;
     font-weight: bold;
     letter-spacing: 2px;
 }
 
 .heroFooterText2 {
     background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     color: #ffffff;
     padding: 4px 14px;
     font-size: 0.6rem;
@@ -261,56 +265,40 @@ main {
     border-radius: 2px;
 }
 
-.heroFrosted {
+.heroImagePanel {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: -75px;
-    height: 100%;
+    min-height: 100%;
+    background-image: url("assets/type.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1.02);
 }
 
-.heroFrostedWindow {
-    width: 92%;
-    height: 90%;
-    position: relative;
-    overflow: hidden;
-    border-radius: 4px;
-    background: linear-gradient(135deg, rgba(20, 30, 30, 0.15) 0%, rgba(10, 15, 15, 0.45) 100%);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    
+.heroRaceSection {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    padding: 35px 25px 25px 25px; 
-    box-sizing: border-box;
-}
-
-.heroFrostedWindow::after {
-    content: '';
-    position: absolute;
+    align-items: flex-start;
+    gap: 14px;
     width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, rgba(181, 137, 61, 0.3), rgba(255,255,255,0.4), rgba(181, 137, 61, 0.3), transparent);
-    top: 0; 
-    left: 0;
-    z-index: 2;
-    animation: laser-scan 4s linear infinite;
+    max-width: 500px;
+    margin-bottom: 0;
+    padding-top: 4px;
 }
 
 .raceSelectorHeader {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
-    margin-bottom: 20px;
+    gap: 10px;
+    padding-bottom: 4px;
 }
 
 .raceTitleWrapper {
-    width: 220px;
-    text-align: center;
+    flex: 1;
+    min-width: 0;
+    text-align: left;
     overflow: hidden;
 }
 
@@ -327,7 +315,7 @@ main {
 
 .raceArrowBtn {
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     color: #ffffff;
     font-size: 16px;
     font-family: monospace;
@@ -346,45 +334,42 @@ main {
     border-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Middle Content Area */
 .raceDetails {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    flex: 1;
-    max-width: 88%;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    gap: 10px;
 }
 
 .raceDesc {
     font-size: 13px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.84);
     font-family: sans-serif;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .raceTags {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .raceTag { 
     font-size: 10px;
     letter-spacing: 1px;
     padding: 4px 10px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.75);
     font-family: monospace;
 }
 
-/* Bottom CTA Button */
 .raceActionBtn {
-    margin-top: auto;
-    padding: 8px 20px;
+    padding: 8px 16px;
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.25);
     color: #ffffff;
@@ -396,8 +381,8 @@ main {
 }
 
 .raceActionBtn:hover {
-    background: rgba(255, 255, 255, 0.9);
-    color: #101515;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
 }
 
 .slideRightEnter {
@@ -408,41 +393,29 @@ main {
     animation: slideLeft 0.25s ease-out forwards;
 }
 
-.tagline-placeholder {
-  width: 200px;
-  height: 12px;
-  background: var(--dark-accent);
-  margin: 0 auto 10px auto;
-}
-
-.main-title-placeholder {
-  width: 280px;
-  height: 45px;
-  border: 2px solid var(--dark-accent);
-  margin: 0 auto 15px auto;
-}
-
-.quote-placeholder {
-  width: 80%;
-  height: 10px;
-  background: var(--border-color);
-  margin: 0 auto;
+.heroGuideSeparator {
+  display: block;
+  width: 95vw;
+  max-width: 1200px;
+  height: 1px;
+  background-color: var(--dark-accent);
+  margin: 30px auto;
 }
 
 /* ============================================================
    SECTION 1 — GUIDEBOOK
    ============================================================ */
 .typeSoulGuideSection {
-  width: 95vw;
-  max-width: 1200px;
+  width: min(100%, 100vw);
+  max-width: none;
   margin: 40px auto 0;
   background-color: var(--ink);
   color: #e8e8e8;
   padding: 40px 45px;
   display: grid;
-  grid-template-columns: 250px minmax(0, 1fr);
+  grid-template-columns: 250px 1fr;
   gap: 24px;
-  align-items: center;
+  align-items: stretch;
   border: 1px solid rgba(201, 162, 76, 0.25);
   background-image: url("assets/type2.png");
   box-shadow: 
@@ -461,6 +434,7 @@ main {
   text-shadow: 0 0 12px rgba(0, 0, 0, 0.9), 0 2px 6px rgba(0, 0, 0, 0.65);
   -webkit-text-stroke: 1px rgba(0, 0, 0, 0.6);
   paint-order: stroke fill;
+  margin-bottom: -500px;
 }
 
 .tsGuideEyebrow {
@@ -491,9 +465,14 @@ main {
 }
 
 .tsGuidePanel {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 14px;
+  align-items: start;
+}
+
+.tsGuideMid,
+.tsGuideLinks {
   padding: 18px;
   border-radius: 4px;
   background: linear-gradient(135deg, rgba(20, 24, 28, 0.55) 0%, rgba(8, 12, 16, 0.7) 100%);
@@ -501,12 +480,11 @@ main {
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.14);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 12px 35px rgba(0, 0, 0, 0.25);
-  max-width: 720px;
-  margin-left: 0;
+  min-height: 180px;
 }
 
 .tsGuideMid {
-  padding: 0;
+  padding: 18px;
 }
 
 .tsGuideMidText {
@@ -521,7 +499,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  padding: 0;
+  align-content: start;
 }
 
 .tsGuideLink {
@@ -547,8 +525,8 @@ main {
    ============================================================ */
 .getting-started-banner,
 .charcreation-banner {
-  width: 95vw;
-  max-width: 1200px;
+  width: min(100%, 100vw);
+  max-width: none;
   margin: 25px auto 0;
   background-color: var(--ink);
   border-left: 3px solid var(--gold);
@@ -580,8 +558,8 @@ main {
    SECTION 3 — BOARD COLUMNS
    ============================================================ */
 .boards-grid {
-  width: 95vw;
-  max-width: 1200px;
+  width: min(100%, 100vw);
+  max-width: none;
   margin: 35px auto 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -715,8 +693,8 @@ main {
    SECTION 4 CONTINUED — CHARACTER CREATION LAYOUT
    ============================================================ */
 .charcreation-layout {
-  width: 95vw;
-  max-width: 1200px;
+  width: min(100%, 100vw);
+  max-width: none;
   margin: 25px auto 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
