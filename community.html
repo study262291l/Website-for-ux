@@ -15,6 +15,7 @@
 
   <link rel="stylesheet" href="headerFooter.css">
   <link rel="stylesheet" href="community.css">
+  <link rel="stylesheet" href="animations.css">
 </head>
 
 <body>
@@ -25,24 +26,24 @@
         <span class="hnBarIcon">✦</span>
         <a href="home.html" class="hnBarNav">Home</a>
         <span class="hnBarDots"></span>
-        <a href="builds.html" class="hnBarNav active">Builds</a>
+        <a href="builds.html" class="hnBarNav">Builds</a>
         <span class="hnBarDots"></span>
         <a href="quiz.html" class="hnBarNav">Quiz</a>
         <span class="hnBarDots"></span>
         <a href="fun-facts.html" class="hnBarNav">Fun Facts</a>
         <span class="hnBarDots"></span>
-        <a href="community.html" class="hnBarNav">Community</a>
+        <a href="community.html" class="hnBarNav active">Community</a>
         <span class="hnBarDots"></span>
         <span class="hnBarViewing">NAVIGATION</span>
       </div>
     </div>
   </header>
 
-  <div class="discordWrapper">
+  <div class="discordWrapper autoShow">
     <div class="bgImage"></div>
     <div class="bgOverlay"></div>
 
-    <main class="discordPage">
+    <main class="discordPage autoShow">
       <div class="discordContainer">
 
         <div class="discordHeroBanner">
@@ -58,7 +59,7 @@
                 <span class="discordOnlineIndicator"><span
                     class="greenDot"></span> Live Community</span>
               </div>
-              <h1 class="discordTitle">TYPE SOUL COMMUNITY</h1>
+              <h1 class="discordTitle imageRevealFaster">TYPE SOUL COMMUNITY</h1>
               <p class="discordDesc">
                 Everything Type Soul lives here — play the game on Roblox, join
                 the community, and discover Type Soul creators, guides, and
@@ -70,7 +71,7 @@
 
         <div class="discordPlatformsGrid">
 
-          <div class="discordPlatformCard">
+          <div class="discordPlatformCard ">
             <div class="discordPlatformIcon iconDiscord">
               <i class="fa-brands fa-discord"></i>
             </div>
@@ -399,6 +400,7 @@
 
 
   <script src="community.js"></script>
+  <script src="animations.js"></script>
 
 </body>
 
