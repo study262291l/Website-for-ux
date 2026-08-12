@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "THE BEGINNING",
 
             description:
-                "Add verified information about Type Soul's early release and the features that were available during this period."
+                "The release of Type Soul where the game slowly gains more and more players overtime."
 
         },
 
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "MAJOR CHANGES",
 
             description:
-                "Add information about important updates, mechanics, races, locations or other changes introduced during this period."
+                "The stage where many updates were being made, but there were many bugs included. Later on the game shut down for a few months due to imbalances of the game."
 
         },
 
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "A NEW ERA",
 
             description:
-                "Add information about major developments that changed how Type Soul was played during this period."
+                "The year where Type Soul Rereleases to the public, hitting a new record of the number of active players in the game."
 
         },
 
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "TODAY",
 
             description:
-                "Add information about the current state of Type Soul and how the game has evolved from its earlier versions."
+                "Game is still running smoothly but with less players due to lack of content."
 
         }
 
