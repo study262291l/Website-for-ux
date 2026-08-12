@@ -30,93 +30,25 @@
 
 
 /* ==========================================================
+   Page Background
+========================================================== */
+
+body {
+    background-color: var(--bg);
+    background-image: var(--texture);
+    background-blend-mode: multiply;
+}
+
+.archivePage {
+    overflow-x: hidden;
+}
+
+
+/* ==========================================================
    Header Nav
 ========================================================== */
 
-.headerNav {
-  background-color: var(--welcomeBg);
-  background-image: var(--texture);
-  background-blend-mode: multiply;
-  padding: 2px 2px;
-  box-sizing: border-box;
-  width: 100%;
-  top: 0;
-  z-index: 999;
-}
-
-
-.headerNavInner {
-  border: 2px solid #000000;
-  padding: 3px;
-  background-color: var(--welcomeBg);
-  background-image: var(--texture);
-  background-blend-mode: multiply;
-  box-sizing: border-box;
-  width: 100%;
-}
-
-
-.hnBarLeft {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 16px;
-
-  background-color: var(--sidebarBg);
-  background-image: var(--texture);
-  background-blend-mode: soft-light;
-
-  width: 100%;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  flex-wrap: wrap;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-
-.hnBarIcon {
-  color: var(--accentRed);
-  font-size: 10px;
-}
-
-.hnBarNav {
-  text-decoration: none;
-  color: var(--textMain);   
-  transition: 0.25s ease;
-}
-
-.active{
-  color: var(--accentRed);        
-  font-family: var(--fontHeader);
-  letter-spacing: 1.5px;
-  text-decoration: none;
-  transition: opacity 0.25s ease;
-}
-
-.hnBarDots {
-  width: 26px;
-  border-top: dotted 2px rgba(255, 255, 255, 0.4); 
-}
-
-.hnBarNav.active:hover {
-  opacity: 0.5;
-}
-
-.hnBarNav:hover {
-  color: var(--accentRed);
-}
-
-.hnBarViewing {
-  font-style: italic;
-  font-weight: 400;
-  text-transform: none;
-  letter-spacing: 0;
-  color: var(--textMain);
-  margin-left: 4px;
-}
+/* Header styles now live in header.css (shared across all pages) */
 
 
 
@@ -338,7 +270,7 @@
 ===================================================== */
 
 .archiveHero {
-    min-height: 650px;
+    min-height: 100vh;
 
     position: relative;
 
@@ -1098,6 +1030,29 @@
     letter-spacing: 2px;
 }
 
+.comparisonTop i {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 15px;
+}
+
+.old .comparisonTop i {
+    background: rgba(244, 133, 93, 0.12);
+    border: 1px solid rgba(244, 133, 93, 0.3);
+}
+
+.new .comparisonTop i {
+    background: rgba(92, 155, 214, 0.12);
+    border: 1px solid rgba(92, 155, 214, 0.3);
+}
+
 .old .comparisonTop span,
 .old .comparisonTop i {
     color: var(--orange);
@@ -1171,7 +1126,15 @@
 
     border-left: 4px solid var(--blue);
 
-    background: var(--white);
+    background:
+        linear-gradient(
+            120deg,
+            rgba(92,155,214,0.06),
+            rgba(244,133,93,0.05)
+        ),
+        var(--white);
+
+    background-blend-mode: normal;
 
     box-shadow: 0 12px 30px rgba(0,0,0,0.06);
 
@@ -1221,23 +1184,35 @@
 ===================================================== */
 
 .archiveFooter {
-    max-width: 1250px;
+    max-width: 100%;
 
-    margin: auto;
+    margin: 60px auto 0;
 
-    padding: 100px 35px 60px;
+    padding: 90px 35px 70px;
 
     text-align: center;
 
-    border-top: 1px solid rgba(0,0,0,0.10);
+    background-color: var(--dark);
+    background-image: var(--texture);
+    background-blend-mode: soft-light;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+
+    position: relative;
 }
 
 .footerLine {
-    display: none;
+    display: block;
+
+    width: 60px;
+
+    margin: 0 auto 22px;
+
+    border-top: 2px dotted rgba(244,133,93,0.5);
 }
 
 .archiveFooter > span {
-    color: #777;
+    color: var(--orange);
 
     font-size: 8px;
 
@@ -1247,14 +1222,24 @@
 }
 
 .archiveFooter p {
-    margin: 12px 0 22px;
+    margin: 12px 0 26px;
 
-    color: #888;
+    color: #9a9aa0;
 
     font-size: 9px;
 }
 
 .archiveFooter a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 12px 22px;
+
+    border: 1px solid var(--orange);
+
     color: var(--orange);
 
     text-decoration: none;
@@ -1264,10 +1249,17 @@
     font-weight: 700;
 
     letter-spacing: 1.5px;
+
+    transition: 0.25s;
+}
+
+.archiveFooter a:hover {
+    background: var(--orange);
+    color: var(--white);
 }
 
 .archiveFooter a i {
-    margin-left: 6px;
+    margin-left: 0;
 }
 
 
@@ -1318,7 +1310,7 @@
     }
 
     .archiveHero {
-        min-height: 520px;
+        min-height: 100vh;
     }
 
     .heroContent {
@@ -1645,6 +1637,8 @@
     font-size: 13px;
 
     line-height: 2;
+
+    white-space: pre-line;
 }
 
 
