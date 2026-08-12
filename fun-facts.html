@@ -350,11 +350,15 @@
                 </div>
 
 
-                <div class="factIcon">
+                <button
+                    class="factIcon factInfoButton"
+                    id="factInfoButton"
+                    type="button"
+                    aria-label="More information about this fact">
 
                     <i class="fa-solid fa-lightbulb"></i>
 
-                </div>
+                </button>
 
 
                 <div class="factContent">
@@ -396,7 +400,71 @@
 
         </section>
 
+<!-- =====================================================
+     FACT DETAILS POPUP
+===================================================== -->
 
+<div
+    class="factModal"
+    id="factModal"
+    aria-hidden="true">
+
+    <div
+        class="factModalBackdrop"
+        id="factModalBackdrop">
+    </div>
+
+
+    <div
+        class="factModalBox"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="factModalTitle">
+
+
+        <button
+            class="factModalClose"
+            id="factModalClose"
+            type="button"
+            aria-label="Close information">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div class="factModalIcon">
+
+            <i class="fa-solid fa-lightbulb"></i>
+
+        </div>
+
+
+        <span
+            class="factModalLabel"
+            id="factModalNumber">
+
+            FACT 01
+
+        </span>
+
+
+        <h3 id="factModalTitle">
+            Fact title
+        </h3>
+
+
+        <div class="factModalLine"></div>
+
+
+        <p id="factModalText">
+            Detailed information about this fact will appear here.
+        </p>
+
+
+    </div>
+
+</div>
         <!-- =================================================
              THEN VS NOW
         ================================================== -->
