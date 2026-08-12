@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-
     /* =====================================================
        TIMELINE
     ====================================================== */
@@ -21,42 +20,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const timelineData = {
 
         "2023": {
-
             title: "THE BEGINNING",
-
             description:
                 "Add verified information about Type Soul's early release and the features that were available during this period."
-
         },
-
 
         "2024": {
-
             title: "MAJOR CHANGES",
-
             description:
                 "Add information about important updates, mechanics, races, locations or other changes introduced during this period."
-
         },
-
 
         "2025": {
-
             title: "A NEW ERA",
-
             description:
                 "Add information about major developments that changed how Type Soul was played during this period."
-
         },
 
-
         "2026": {
-
             title: "TODAY",
-
             description:
                 "Add information about the current state of Type Soul and how the game has evolved from its earlier versions."
-
         }
 
     };
@@ -66,34 +50,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
         item.addEventListener("click", () => {
 
-            const year =
-                item.dataset.year;
+            const year = item.dataset.year;
 
-
-            const data =
-                timelineData[year];
-
+            const data = timelineData[year];
 
             if (!data) return;
 
 
             timelineItems.forEach((timeline) => {
-
                 timeline.classList.remove("active");
-
             });
 
 
             item.classList.add("active");
 
 
-            timelineYear.textContent =
-                year;
+            timelineYear.textContent = year;
 
-
-            timelineTitle.textContent =
-                data.title;
-
+            timelineTitle.textContent = data.title;
 
             timelineDescription.textContent =
                 data.description;
@@ -112,13 +86,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         "Bankai requirements used to be way harder than now.",
 
-        "Type Soul community was considered one of the most toxic.",
+        "The Type Soul community was considered one of the most toxic.",
 
-        "There were alligations of one of the creators being a predator.",
+        "There were allegations of one of the creators being a predator.",
 
-        "Type Soul did a re-release of the game three times.",
+        "Type Soul had a re-release of the game three times.",
 
-        "True Mode used to be a thing which overpowered everyone, but got removed afterwards."
+        "True Mode used to be a thing which overpowered everyone, but was removed afterwards."
 
     ];
 
