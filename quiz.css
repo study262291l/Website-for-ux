@@ -1,0 +1,50 @@
+:root {
+  --primaryBg: #121214;
+  --secondaryBg: #1c1c1e;
+  --sidebarBg: #191919;
+  --welcomeBg: #ddd;
+
+  --lightDark: #444;
+  --lightDarker: #3b3b3b;
+
+  --accentRed: #f4855d;
+  --accentBlue: #7EBAEE;
+  --darkRed: #8c4a4a;
+
+  --textMain: #e0e0e0;
+  --textMain2: #ffffff;
+  --textMuted: #8e8e93;
+
+  --welcomeBgLight: #e7e5e1;
+  --wCardBg: #ffffff;
+  --wCardDark: #1c1c1e;
+  --textDarkPrimary: #1e1e1f;
+  --textDarkMuted: #6b6b6f;
+
+  --fontHeader: 'Cinzel', serif;
+  --fontBody: 'Montserrat', sans-serif;
+  --fontScript: 'Pinyon Script', cursive;
+
+  --texture: url('assets/subtle-grunge.png');
+  --textureFlower: url('assets/flower.png');
+
+  --discordBlurple: #5865F2;
+  --discordBlurpleDark: #4752c4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--welcomeBg);
+  background-image: var(--texture);
+  background-blend-mode: multiply;
+  font-family: var(--fontBody);
+  font-size: 12px;
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
