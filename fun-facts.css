@@ -1161,3 +1161,296 @@ body {
 .sectionHeading > span {
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
+
+/* =====================================================
+   WHITE THEME - FILL THE PAGE
+===================================================== */
+
+/* Make the main content wider */
+.archiveSection {
+    max-width: 1250px;
+    padding: 110px 35px;
+}
+
+/* Bigger section headings */
+.sectionHeading {
+    margin-bottom: 55px;
+}
+
+.sectionHeading > span {
+    font-size: 10px;
+}
+
+.sectionHeading h2 {
+    font-size: 42px;
+    margin: 12px 0;
+    color: #171719;
+}
+
+.sectionHeading p {
+    max-width: 750px;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #66666c;
+}
+
+
+/* =====================================================
+   EARLY DAYS
+===================================================== */
+
+.earlyGrid {
+    grid-template-columns: 1.15fr 1fr;
+    gap: 55px;
+}
+
+.archiveImage {
+    min-height: 470px;
+}
+
+.archiveImage img {
+    height: 470px;
+}
+
+.earlyText {
+    padding: 50px;
+}
+
+.smallLabel {
+    font-size: 9px;
+}
+
+.earlyText h3 {
+    font-size: 38px;
+    margin: 15px 0 20px;
+    color: #171719;
+}
+
+.earlyText > p {
+    font-size: 13px;
+    line-height: 2;
+    color: #55555b;
+}
+
+.quoteBox {
+    margin-top: 35px;
+    padding: 25px;
+    background: #f1f1f1;
+}
+
+.quoteBox p {
+    font-size: 14px;
+    color: #55555b;
+}
+
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.timeline {
+    margin-top: 80px;
+}
+
+.timelineYear {
+    font-size: 18px;
+}
+
+.timelineTitle {
+    font-size: 9px;
+}
+
+.timelineContent {
+    max-width: 950px;
+    margin-top: 65px;
+    padding: 55px;
+    min-height: 220px;
+}
+
+.timelineContentYear {
+    font-size: 10px;
+}
+
+.timelineContent h3 {
+    font-size: 34px;
+    margin: 15px 0;
+    color: #171719;
+}
+
+.timelineContent p {
+    max-width: 750px;
+    font-size: 13px;
+    line-height: 2;
+    color: #55555b;
+}
+
+
+/* =====================================================
+   DID YOU KNOW
+===================================================== */
+
+.factCard {
+    min-height: 430px;
+    padding: 65px;
+    background: #f4f4f4;
+}
+
+.factIcon {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+}
+
+.factContent > span {
+    font-size: 9px;
+}
+
+.factContent h3 {
+    max-width: 900px;
+    font-size: 34px;
+    line-height: 1.6;
+    color: #171719;
+}
+
+.factNumber {
+    top: 30px;
+    right: 35px;
+}
+
+.factNumber span {
+    font-size: 28px;
+}
+
+.factControls {
+    margin-top: 40px;
+}
+
+.factControls button {
+    width: 48px;
+    height: 48px;
+}
+
+
+/* =====================================================
+   THEN VS NOW
+===================================================== */
+
+.comparisonGrid {
+    gap: 30px;
+}
+
+.comparisonCard {
+    min-height: 390px;
+    padding: 45px;
+}
+
+.comparisonTop {
+    margin-bottom: 85px;
+}
+
+.comparisonTop span {
+    font-size: 9px;
+}
+
+.comparisonYear {
+    font-size: 9px;
+}
+
+.comparisonCard h3 {
+    font-size: 30px;
+    color: #171719;
+}
+
+.comparisonCard p {
+    max-width: 500px;
+    font-size: 13px;
+    line-height: 2;
+    color: #55555b;
+}
+
+.comparisonNumber {
+    font-size: 120px;
+}
+
+
+/* =====================================================
+   ARCHIVE NOTE
+===================================================== */
+
+.archiveNote {
+    max-width: 1180px;
+    margin: 20px auto 0;
+    padding: 45px 50px;
+    background: #f1f1f1;
+}
+
+.archiveNote > span {
+    font-size: 9px;
+}
+
+.archiveNote p {
+    max-width: 850px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #55555b;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.archiveFooter {
+    max-width: 1250px;
+    padding: 100px 35px 60px;
+}
+
+.archiveFooter > span {
+    font-size: 9px;
+}
+
+.archiveFooter p {
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   MAKE WHITE PAGE TEXT DARK
+===================================================== */
+
+.archiveSection .sectionHeading h2,
+.earlyText h3,
+.timelineContent h3,
+.factContent h3,
+.comparisonCard h3 {
+    color: #171719;
+}
+
+.archiveSection .sectionHeading p,
+.earlyText > p,
+.timelineContent p,
+.comparisonCard p,
+.archiveNote p {
+    color: #55555b;
+}
+
+
+/* =====================================================
+   MORE SPACE ON LARGE SCREENS
+===================================================== */
+
+@media (min-width: 1200px) {
+
+    .archiveHero {
+        min-height: 650px;
+    }
+
+    .heroContent {
+        padding: 120px 35px;
+    }
+
+    .heroContent h1 {
+        font-size: 95px;
+    }
+
+}
