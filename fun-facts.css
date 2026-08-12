@@ -1,1197 +1,358 @@
-    :root {
-        --bg: #121214;
-        --panel: #1c1c1e;
+:root {
+    --bg: #f7f7f5;
+    --white: #ffffff;
 
-        --orange: #f4855d;
-        --blue: #7EBAEE;
+    --dark: #171719;
+    --dark2: #252529;
 
-        --white: #ffffff;
-        --text: #e0e0e0;
-        --muted: #8e8e93;
+    --text: #343438;
+    --muted: #66666d;
 
-        --border: rgba(255,255,255,0.14);
+    --orange: #f4855d;
+    --blue: #5c9bd6;
 
-        --fontHeader: 'Cinzel', serif;
-        --fontBody: 'Montserrat', sans-serif;
+    --border: rgba(0, 0, 0, 0.12);
 
-        --texture: url('assets/subtle-grunge.png');
-        --textureFlower: url('assets/flower.png');
-    }
+    --fontHeader: 'Cinzel', serif;
+    --fontBody: 'Montserrat', sans-serif;
 
+    --texture: url('assets/subtle-grunge.png');
+    --textureFlower: url('assets/flower.png');
+}
 
-    /* =====================================================
-    RESET
-    ===================================================== */
 
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    body {
-        background:
-            var(--bg)
-            var(--texture);
-
-        color: var(--text);
-
-        font-family: var(--fontBody);
-
-        font-size: 12px;
-
-        min-height: 100vh;
-
-        overflow-x: hidden;
-    }
-
-
-    /* =====================================================
-    NAVIGATION
-    ===================================================== */
-
-    .headerNav {
-        width: 100%;
-        height: 56px;
-
-        display: flex;
-        align-items: center;
-
-        position: sticky;
-        top: 0;
-
-        z-index: 100;
-
-        background-color: var(--white);
-        background-image: var(--textureFlower);
-        background-position: center;
-
-        border-bottom: 1px solid rgba(0,0,0,0.08);
-    }
-
-    .navContainer {
-        width: 100%;
-
-        padding: 0 20px;
-
-        display: flex;
-        align-items: center;
-    }
-
-    .navHomeIcon {
-        color: var(--orange);
-
-        font-size: 14px;
-
-        margin-right: 20px;
-
-        text-decoration: none;
-    }
-
-    .mainNav {
-        display: flex;
-
-        gap: 20px;
-    }
-
-    .mainNav a {
-        color: var(--muted);
-
-        text-decoration: none;
-
-        font-size: 10px;
-        font-weight: 700;
-
-        text-transform: uppercase;
-
-        letter-spacing: 1px;
-
-        display: flex;
-        align-items: center;
-
-        gap: 6px;
-
-        transition: 0.25s;
-    }
-
-    .mainNav a i {
-        color: var(--orange);
-    }
-
-    .mainNav a:hover,
-    .mainNav a.active {
-        color: #1c1c1e;
-    }
-
-
-    /* =====================================================
-    HERO
-    ===================================================== */
-
-    .archiveHero {
-        min-height: 560px;
-
-        position: relative;
-
-        display: flex;
-        align-items: center;
-
-        overflow: hidden;
-
-        background:
-            linear-gradient(
-                90deg,
-                rgba(18,18,20,0.97),
-                rgba(18,18,20,0.78),
-                rgba(18,18,20,0.45)
-            ),
-            url("images/type-soul-archive.jpg");
-
-        background-size: cover;
-
-        background-position: center;
-    }
-
-    .heroOverlay {
-        position: absolute;
-
-        inset: 0;
-
-        background:
-            linear-gradient(
-                to bottom,
-                transparent 60%,
-                var(--bg) 100%
-            );
-
-        pointer-events: none;
-    }
-
-    .heroContent {
-        position: relative;
-
-        z-index: 2;
-
-        width: 100%;
-
-        max-width: 1100px;
-
-        margin: auto;
-
-        padding: 90px 25px;
-    }
-
-    .archiveEyebrow {
-        color: var(--orange);
-
-        font-size: 8px;
-
-        font-weight: 700;
-
-        letter-spacing: 3px;
-    }
-
-    .heroContent h1 {
-        margin: 15px 0;
-
-        color: var(--white);
-
-        font-family: var(--fontHeader);
-
-        font-size: clamp(48px, 7vw, 82px);
-
-        font-weight: 900;
-
-        line-height: 0.95;
-
-        letter-spacing: 2px;
-    }
-
-    .heroLine {
-        width: 180px;
-
-        margin: 25px 0;
-
-        border-top: 2px dotted rgba(255,255,255,0.3);
-
-        position: relative;
-    }
-
-    .heroLine::after {
-        content: "✦";
-
-        position: absolute;
-
-        right: -20px;
-
-        top: -11px;
-
-        color: var(--orange);
-
-        font-size: 15px;
-    }
-
-    .heroContent p {
-        max-width: 600px;
-
-        color: var(--muted);
-
-        font-size: 10px;
-
-        line-height: 1.9;
-    }
-
-    .exploreButton {
-        display: inline-flex;
-
-        align-items: center;
-
-        gap: 10px;
-
-        margin-top: 25px;
-
-        padding: 12px 20px;
-
-        border: 1px solid var(--orange);
-
-        background: transparent;
-
-        color: var(--orange);
-
-        text-decoration: none;
-
-        font-size: 8px;
-
-        font-weight: 700;
-
-        letter-spacing: 1.5px;
-
-        transition: 0.25s;
-    }
-
-    .exploreButton:hover {
-        background: var(--orange);
-
-        color: var(--bg);
-    }
-
-
-    /* =====================================================
-    SECTIONS
-    ===================================================== */
-
-    .archiveSection {
-        width: 100%;
-
-        max-width: 1100px;
-
-        margin: auto;
-
-        padding: 90px 25px;
-    }
-
-    .sectionHeading {
-        margin-bottom: 45px;
-    }
-
-    .sectionHeading > span {
-        color: var(--orange);
-
-        font-size: 8px;
-
-        font-weight: 700;
-
-        letter-spacing: 2px;
-    }
-
-    .sectionHeading h2 {
-        margin: 8px 0;
-
-        color: var(--white);
-
-        font-family: var(--fontHeader);
-
-        font-size: 30px;
-
-        font-weight: 500;
-
-        letter-spacing: 1px;
-    }
-
-    .sectionHeading p {
-        max-width: 600px;
-
-        color: var(--muted);
-
-        font-size: 9px;
-
-        line-height: 1.8;
-    }
-
-
-    /* =====================================================
-    EARLY DAYS
-    ===================================================== */
-
-    .earlyGrid {
-        display: grid;
-
-        grid-template-columns: 1.2fr 1fr;
-
-        gap: 45px;
-
-        align-items: center;
-    }
-
-    .archiveImage {
-        position: relative;
-
-        overflow: hidden;
-
-        border: 1px solid var(--border);
-
-        background: #0d0d0e;
-    }
-
-    .archiveImage img {
-        width: 100%;
-
-        height: 360px;
-
-        display: block;
-
-        object-fit: cover;
-
-        filter: grayscale(35%);
-
-        transition: 0.4s;
-    }
-
-    .archiveImage:hover img {
-        transform: scale(1.03);
-
-        filter: grayscale(10%);
-    }
-
-    .imageLabel {
-        position: absolute;
-
-        left: 15px;
-        bottom: 15px;
-
-        padding: 7px 10px;
-
-        background: rgba(0,0,0,0.8);
-
-        color: var(--orange);
-
-        font-size: 7px;
-
-        font-weight: 700;
-
-        letter-spacing: 1.5px;
-    }
-
-    .smallLabel {
-        color: var(--blue);
-
-        font-size: 7px;
-
-        font-weight: 700;
-
-        letter-spacing: 2px;
-    }
-
-    .earlyText h3 {
-        margin: 12px 0;
-
-        color: var(--white);
-
-        font-family: var(--fontHeader);
-
-        font-size: 27px;
-
-        font-weight: 500;
-    }
-
-    .earlyText > p {
-        color: var(--muted);
-
-        font-size: 9px;
-
-        line-height: 1.9;
-    }
-
-    .quoteBox {
-        margin-top: 25px;
-
-        padding: 20px;
-
-        border-left: 2px solid var(--orange);
-
-        background: rgba(255,255,255,0.025);
-    }
-
-    .quoteBox i {
-        color: var(--orange);
-    }
-
-    .quoteBox p {
-        margin-top: 10px;
-
-        color: #aaa;
-
-        font-family: var(--fontHeader);
-
-        font-size: 11px;
-
-        line-height: 1.7;
-    }
-
-
-    /* =====================================================
-    TIMELINE
-    ===================================================== */
-
-    .timelineSection {
-        border-top: 1px dotted rgba(255,255,255,0.2);
-    }
-
-    .timeline {
-        width: 100%;
-
-        display: grid;
-
-        grid-template-columns: repeat(4, 1fr);
-
-        position: relative;
-
-        margin-top: 60px;
-    }
-
-    .timeline::before {
-        content: "";
-
-        position: absolute;
-
-        top: 12px;
-
-        left: 8%;
-        right: 8%;
-
-        height: 1px;
-
-        background:
-            repeating-linear-gradient(
-                to right,
-                rgba(255,255,255,0.3) 0,
-                rgba(255,255,255,0.3) 4px,
-                transparent 4px,
-                transparent 10px
-            );
-    }
-
-    .timelineItem {
-        appearance: none;
-
-        border: none;
-
-        outline: none;
-
-        background: transparent;
-
-        color: #666;
-
-        cursor: pointer;
-
-        text-align: center;
-
-        position: relative;
-
-        z-index: 2;
-
-        padding: 0;
-    }
-
-    .timelineDot {
-        width: 24px;
-        height: 24px;
-
-        display: block;
-
-        margin: 0 auto 15px;
-
-        border: 1px solid #555;
-
-        border-radius: 50%;
-
-        background: var(--bg);
-
-        transition: 0.25s;
-    }
-
-    .timelineItem:hover {
-        color: var(--white);
-    }
-
-    .timelineItem.active {
-        color: var(--white);
-    }
-
-    .timelineItem.active .timelineDot {
-        border-color: var(--orange);
-
-        background: var(--orange);
-
-        box-shadow:
-            0 0 0 5px rgba(244,133,93,0.1);
-    }
-
-    .timelineYear {
-        display: block;
-
-        color: var(--orange);
-
-        font-family: var(--fontHeader);
-
-        font-size: 14px;
-    }
-
-    .timelineTitle {
-        display: block;
-
-        margin-top: 5px;
-
-        color: inherit;
-
-        font-size: 7px;
-
-        font-weight: 700;
-
-        letter-spacing: 1px;
-    }
-
-    .timelineContent {
-        max-width: 750px;
-
-        margin: 55px auto 0;
-
-        padding: 35px;
-
-        text-align: center;
-
-        border: 1px solid var(--border);
-
-        background: rgba(255,255,255,0.025);
-
-        position: relative;
-    }
-
-    .timelineContent::before {
-        content: "✦";
-
-        position: absolute;
-
-        top: 15px;
-        right: 20px;
-
-        color: rgba(126,186,238,0.3);
-
-        font-size: 17px;
-    }
-
-    .timelineContentYear {
-        color: var(--orange);
-
-        font-size: 8px;
-
-        font-weight: 700;
-
-        letter-spacing: 2px;
-    }
-
-    .timelineContent h3 {
-        margin: 10px 0;
-
-        color: var(--white);
-
-        font-family: var(--fontHeader);
-
-        font-size: 25px;
-
-        font-weight: 500;
-    }
-
-    .timelineContent p {
-        max-width: 600px;
-
-        margin: auto;
-
-        color: var(--muted);
-
-        font-size: 9px;
-
-        line-height: 1.9;
-    }
-
-
-    /* =====================================================
-    DID YOU KNOW
-    ===================================================== */
-
-    .factsSection {
-        border-top: 1px dotted rgba(255,255,255,0.2);
-    }
-
-    .factCard {
-        min-height: 290px;
-
-        padding: 40px;
-
-        position: relative;
-
-        display: flex;
-
-        flex-direction: column;
-
-        justify-content: center;
-
-        overflow: hidden;
-
-        border: 1px solid rgba(244,133,93,0.25);
-
-        background:
-            linear-gradient(
-                135deg,
-                rgba(244,133,93,0.055),
-                rgba(126,186,238,0.025)
-            );
-    }
-
-    .factCard::before {
-        content: "FACT";
-
-        position: absolute;
-
-        right: -15px;
-        bottom: -35px;
-
-        color: rgba(255,255,255,0.025);
-
-        font-family: var(--fontHeader);
-
-        font-size: 110px;
-
-        font-weight: 900;
-
-        pointer-events: none;
-    }
-
-    .factNumber {
-        position: absolute;
-
-        top: 20px;
-        right: 25px;
-    }
-
-    .factNumber span {
-        color: var(--orange);
-
-        font-family: var(--fontHeader);
-
-        font-size: 22px;
-    }
-
-    .factNumber small {
-        color: #555;
-
-        font-size: 8px;
-    }
-
-    .factIcon {
-        width: 45px;
-        height: 45px;
-
-        display: flex;
-
-        align-items: center;
-        justify-content: center;
-
-        margin-bottom: 20px;
-
-        border: 1px solid rgba(126,186,238,0.3);
-
-        color: var(--blue);
-
-        background: rgba(126,186,238,0.04);
-    }
-
-    .factContent > span {
-        color: var(--blue);
-
-        font-size: 7px;
-
-        font-weight: 700;
-
-        letter-spacing: 2px;
-    }
-
-    .factContent h3 {
-        max-width: 750px;
-
-        margin-top: 12px;
-
-        color: var(--white);
-
-        font-family: var(--fontHeader);
-
-        font-size: 22px;
-
-        font-weight: 500;
-
-        line-height: 1.5;
-    }
-
-    .factControls {
-        display: flex;
-
-        gap: 8px;
-
-        margin-top: 30px;
-    }
-
-    .factControls button {
-        width: 38px;
-        height: 38px;
-
-        border: 1px solid rgba(255,255,255,0.15);
-
-        background: transparent;
-
-        color: #777;
-
-        cursor: pointer;
-
-        transition: 0.2s;
-    }
-
-    .factControls button:hover {
-        border-color: var(--orange);
-
-        color: var(--orange);
-    }
-
-
-    /* =====================================================
-    THEN VS NOW
-    ===================================================== */
-
-    .comparisonSection {
-        border-top: 1px dotted rgba(255,255,255,0.2);
-    }
-
-    .comparisonGrid {
-        display: grid;
-
-        grid-template-columns: 1fr 1fr;
-
-        gap: 20px;
-    }
-
-    .comparisonCard {
-        overflow: hidden;
-
-        border: 1px solid var(--border);
-
-        background: rgba(255,255,255,0.025);
-
-        transition: 0.25s;
-    }
-
-    .comparisonCard:hover {
-        transform: translateY(-5px);
-
-        border-color: rgba(244,133,93,0.35);
-    }
-
-    .comparisonImage {
-        height: 280px;
-
-        position: relative;
-
-        overflow: hidden;
-
-        background: #0d0d0e;
-    }
-
-    .comparisonImage img {
-        width: 100%;
-        height: 100%;
-
-        object-fit: cover;
-
-        display: block;
-
-        filter: grayscale(30%);
-
-        transition: 0.4s;
-    }
-
-    .comparisonCard:hover .comparisonImage img {
-        transform: scale(1.04);
-
-        filter: grayscale(0%);
-    }
-
-    .comparisonImage span {
-        position: absolute;
-
-        left: 15px;
-        bottom: 15px;
-
-        padding: 7px 12px;
-
-        background: rgba(0,0,0,0.85);
-
-        color: var(--orange);
-
-        font-size: 8px;
-
-        font-weight: 700;
-
-        letter-spacing: 2px;
-    }
-
-    .comparisonCard:nth-child(2) .comparisonImage span {
-        color: var(--blue);
-    }
-
-    .comparisonContent {
-        padding: 25px;
-    }
-
-    .comparisonContent > span {
-        color: #777;
-
-        font-size: 7px;
-
-        font-weight: 700;
-
-        letter-spacing: 2px;
-    }
-
-    .comparisonContent h3 {
-        margin: 8px 0;
-
-        color: var(--white);
-
-        font-family: var(--fontHeader);
-
-        font-size: 21px;
-
-        font-weight: 500;
-    }
-
-    .comparisonContent p {
-        color: var(--muted);
-
-        font-size: 9px;
-
-        line-height: 1.9;
-    }
-
-
-    /* =====================================================
-    FOOTER
-    ===================================================== */
-
-    .archiveFooter {
-        max-width: 1100px;
-
-        margin: auto;
-
-        padding: 70px 25px 45px;
-
-        text-align: center;
-
-        border-top: 1px dotted rgba(255,255,255,0.2);
-    }
-
-    .archiveFooter > span {
-        color: #555;
-
-        font-size: 7px;
-
-        font-weight: 700;
-
-        letter-spacing: 2px;
-    }
-
-    .archiveFooter p {
-        margin: 10px 0 20px;
-
-        color: #555;
-
-        font-size: 8px;
-    }
-
-    .archiveFooter a {
-        color: var(--orange);
-
-        text-decoration: none;
-
-        font-size: 7px;
-
-        font-weight: 700;
-
-        letter-spacing: 1.5px;
-    }
-
-    .archiveFooter a i {
-        margin-left: 6px;
-    }
-
-
-    /* =====================================================
-    RESPONSIVE
-    ===================================================== */
-
-    @media (max-width: 800px) {
-
-        .earlyGrid {
-            grid-template-columns: 1fr;
-        }
-
-        .comparisonGrid {
-            grid-template-columns: 1fr;
-        }
-
-        .archiveImage img {
-            height: 300px;
-        }
-
-    }
-
-
-    @media (max-width: 600px) {
-
-        .mainNav {
-            gap: 10px;
-
-            overflow-x: auto;
-        }
-
-        .mainNav a {
-            font-size: 8px;
-        }
-
-        .archiveHero {
-            min-height: 500px;
-        }
-
-        .heroContent {
-            padding: 70px 20px;
-        }
-
-        .heroContent h1 {
-            font-size: 42px;
-        }
-
-        .archiveSection {
-            padding: 65px 20px;
-        }
-
-        .sectionHeading h2 {
-            font-size: 25px;
-        }
-
-        .timeline {
-            grid-template-columns: 1fr;
-
-            gap: 25px;
-
-            margin-top: 35px;
-        }
-
-        .timeline::before {
-            display: none;
-        }
-
-        .timelineItem {
-            display: grid;
-
-            grid-template-columns: 35px 60px 1fr;
-
-            align-items: center;
-
-            text-align: left;
-        }
-
-        .timelineDot {
-            margin: 0;
-        }
-
-        .timelineYear {
-            text-align: left;
-        }
-
-        .timelineTitle {
-            margin-top: 0;
-        }
-
-        .timelineContent {
-            margin-top: 40px;
-
-            padding: 25px 20px;
-        }
-
-        .factCard {
-            padding: 30px 22px;
-        }
-
-        .factContent h3 {
-            font-size: 18px;
-        }
-
-        .comparisonImage {
-            height: 230px;
-        }
-
-    }
 /* =====================================================
-   READABILITY PATCH
+   RESET
 ===================================================== */
 
-/* Make the grunge background less distracting */
-body {
-  background-color: var(--welcomeBg);
-  background-image: var(--texture);
-  background-blend-mode: multiply;
-
-  font-family: var(--fontBody);
-  font-size: 12px;
-  margin: 0;
-  min-height: 100vh;
-  overflow-x: hidden;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-/* Give section headings a subtle dark backing */
-.sectionHeading {
-    padding: 18px 22px;
 
-    background: rgba(10, 10, 12, 0.70);
+html {
+    scroll-behavior: smooth;
+}
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
+body {
+    background:
+        linear-gradient(
+            rgba(247, 247, 245, 0.55),
+            rgba(247, 247, 245, 0.55)
+        ),
+        var(--texture);
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.headerNav {
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+
+    background-color: var(--white);
+    background-image: var(--textureFlower);
+    background-position: center;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.navContainer {
+    width: 100%;
+    max-width: 1250px;
+
+    margin: auto;
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+}
+
+.navHomeIcon {
+    color: var(--orange);
+
+    font-size: 15px;
+
+    margin-right: 25px;
+
+    text-decoration: none;
+}
+
+.mainNav {
+    display: flex;
+    gap: 25px;
+}
+
+.mainNav a {
+    color: #66666b;
+
+    text-decoration: none;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    transition: 0.25s;
+}
+
+.mainNav a i {
+    color: var(--orange);
+}
+
+.mainNav a:hover,
+.mainNav a.active {
+    color: var(--dark);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.archiveHero {
+    min-height: 650px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15, 15, 17, 0.95),
+            rgba(15, 15, 17, 0.76),
+            rgba(15, 15, 17, 0.45)
+        ),
+        url("assets/type.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.heroOverlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 55%,
+            rgba(15, 15, 17, 0.90) 100%
+        );
+
+    pointer-events: none;
+}
+
+.heroContent {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 120px 35px;
+}
+
+.archiveEyebrow {
+    color: var(--orange);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+
+.heroContent h1 {
+    margin: 18px 0;
+
+    color: var(--white);
+
+    font-family: var(--fontHeader);
+
+    font-size: clamp(60px, 8vw, 100px);
+
+    font-weight: 900;
+
+    line-height: 0.95;
+
+    letter-spacing: 2px;
+
+    text-shadow: 0 5px 20px rgba(0,0,0,0.75);
+}
+
+.heroContent h1 span {
+    display: block;
+
+    margin-left: 55px;
+
+    color: transparent;
+
+    -webkit-text-stroke: 1px rgba(255,255,255,0.7);
+}
+
+.heroLine {
+    width: 220px;
+
+    margin: 30px 0;
+
+    border-top: 2px dotted rgba(255,255,255,0.35);
+
+    position: relative;
+}
+
+.heroLine::after {
+    content: "✦";
+
+    position: absolute;
+
+    right: -22px;
+    top: -12px;
+
+    color: var(--orange);
+
+    font-size: 17px;
+}
+
+.heroContent p {
+    max-width: 700px;
+
+    padding: 14px 18px;
+
+    color: #e0e0e3;
+
+    background: rgba(0,0,0,0.38);
+
     border-left: 3px solid var(--orange);
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    font-size: 12px;
+
+    line-height: 1.9;
+
+    text-shadow: 0 2px 6px rgba(0,0,0,0.8);
 }
 
-/* Make normal paragraphs brighter */
-.sectionHeading p,
-.earlyText > p,
-.timelineContent p,
-.comparisonCard p {
-    color: #d0d0d5;
+.exploreButton {
+    display: inline-flex;
 
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 30px;
+
+    padding: 14px 24px;
+
+    border: 1px solid var(--orange);
+
+    background: rgba(0,0,0,0.45);
+
+    color: var(--orange);
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    transition: 0.25s;
 }
 
-/* Put the early-days text on a darker panel */
-.earlyText {
-    padding: 30px;
-
-    background: rgba(12, 12, 14, 0.82);
-
-    border: 1px solid rgba(255, 255, 255, 0.10);
-
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+.exploreButton:hover {
+    background: var(--orange);
+    color: var(--white);
 }
 
-/* Timeline information */
-.timelineContent {
-    background: rgba(12, 12, 14, 0.85);
-
-    border: 1px solid rgba(255, 255, 255, 0.12);
-
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-}
-
-/* Did You Know card */
-.factCard {
-    background: rgba(12, 12, 14, 0.86);
-
-    border: 1px solid rgba(244, 133, 93, 0.30);
-
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-}
-
-/* Make the actual fact text stand out */
-.factContent h3 {
-    color: #ffffff;
-
-    text-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.8);
-}
-
-/* Then vs Now cards */
-.comparisonCard {
-    background: rgba(12, 12, 14, 0.84);
-
-    border: 1px solid rgba(255, 255, 255, 0.10);
-
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-}
-
-/* Quote */
-.quoteBox {
-    background: rgba(255, 255, 255, 0.045);
-}
-
-.quoteBox p {
-    color: #d0d0d5;
-}
-
-/* Make small labels easier to see */
-.smallLabel,
-.archiveEyebrow,
-.sectionHeading > span {
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
-}
 
 /* =====================================================
-   WHITE THEME - FILL THE PAGE
+   GENERAL SECTIONS
 ===================================================== */
 
-/* Make the main content wider */
 .archiveSection {
+    width: 100%;
     max-width: 1250px;
+
+    margin: auto;
+
     padding: 110px 35px;
 }
 
-/* Bigger section headings */
 .sectionHeading {
-    margin-bottom: 55px;
+    margin-bottom: 60px;
+
+    padding: 28px 30px;
+
+    background: rgba(255,255,255,0.85);
+
+    border: 1px solid var(--border);
+
+    border-left: 4px solid var(--orange);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
 }
 
 .sectionHeading > span {
-    font-size: 10px;
+    color: var(--orange);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
 }
 
 .sectionHeading h2 {
-    font-size: 42px;
     margin: 12px 0;
-    color: #171719;
+
+    color: var(--dark);
+
+    font-family: var(--fontHeader);
+
+    font-size: 42px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
 }
 
 .sectionHeading p {
-    max-width: 750px;
+    max-width: 780px;
+
+    color: var(--muted);
+
     font-size: 13px;
-    line-height: 1.8;
-    color: #66666c;
+
+    line-height: 1.9;
 }
 
 
@@ -1200,47 +361,136 @@ body {
 ===================================================== */
 
 .earlyGrid {
+    display: grid;
+
     grid-template-columns: 1.15fr 1fr;
+
     gap: 55px;
+
+    align-items: stretch;
 }
 
 .archiveImage {
+    position: relative;
+
+    overflow: hidden;
+
     min-height: 470px;
+
+    border: 1px solid var(--border);
+
+    background: var(--dark);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
 }
 
 .archiveImage img {
-    height: 470px;
+    width: 100%;
+    height: 100%;
+    min-height: 470px;
+
+    display: block;
+
+    object-fit: cover;
+
+    filter: grayscale(25%);
+
+    transition: 0.4s;
+}
+
+.archiveImage:hover img {
+    transform: scale(1.03);
+
+    filter: grayscale(0%);
+}
+
+.imageLabel {
+    position: absolute;
+
+    left: 20px;
+    bottom: 20px;
+
+    padding: 9px 13px;
+
+    background: rgba(0,0,0,0.85);
+
+    color: var(--orange);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
 }
 
 .earlyText {
     padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.07);
 }
 
 .smallLabel {
+    color: var(--blue);
+
     font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
 }
 
 .earlyText h3 {
+    margin: 15px 0 22px;
+
+    color: var(--dark);
+
+    font-family: var(--fontHeader);
+
     font-size: 38px;
-    margin: 15px 0 20px;
-    color: #171719;
+
+    font-weight: 600;
 }
 
 .earlyText > p {
+    color: var(--text);
+
     font-size: 13px;
+
     line-height: 2;
-    color: #55555b;
 }
 
 .quoteBox {
     margin-top: 35px;
+
     padding: 25px;
-    background: #f1f1f1;
+
+    border-left: 3px solid var(--orange);
+
+    background: #f1f1ef;
+}
+
+.quoteBox i {
+    color: var(--orange);
 }
 
 .quoteBox p {
-    font-size: 14px;
+    margin-top: 12px;
+
     color: #55555b;
+
+    font-family: var(--fontHeader);
+
+    font-size: 14px;
+
+    line-height: 1.7;
 }
 
 
@@ -1248,40 +498,188 @@ body {
    TIMELINE
 ===================================================== */
 
+.timelineSection {
+    border-top: 1px solid rgba(0,0,0,0.10);
+}
+
 .timeline {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    position: relative;
+
     margin-top: 80px;
 }
 
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    top: 12px;
+
+    left: 8%;
+    right: 8%;
+
+    height: 2px;
+
+    background:
+        repeating-linear-gradient(
+            to right,
+            #c9c9cd 0,
+            #c9c9cd 5px,
+            transparent 5px,
+            transparent 12px
+        );
+}
+
+.timelineItem {
+    appearance: none;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #77777d;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 2;
+
+    padding: 0;
+}
+
+.timelineDot {
+    width: 27px;
+    height: 27px;
+
+    display: block;
+
+    margin: 0 auto 18px;
+
+    border: 2px solid #999;
+
+    border-radius: 50%;
+
+    background: var(--bg);
+
+    transition: 0.25s;
+}
+
+.timelineItem:hover {
+    color: var(--dark);
+}
+
+.timelineItem.active {
+    color: var(--dark);
+}
+
+.timelineItem.active .timelineDot {
+    border-color: var(--orange);
+
+    background: var(--orange);
+
+    box-shadow:
+        0 0 0 6px rgba(244,133,93,0.12);
+}
+
 .timelineYear {
+    display: block;
+
+    color: var(--orange);
+
+    font-family: var(--fontHeader);
+
     font-size: 18px;
 }
 
 .timelineTitle {
-    font-size: 9px;
+    display: block;
+
+    margin-top: 7px;
+
+    color: inherit;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
 }
 
 .timelineContent {
-    max-width: 950px;
-    margin-top: 65px;
-    padding: 55px;
-    min-height: 220px;
+    max-width: 900px;
+
+    min-height: 230px;
+
+    margin: 65px auto 0;
+
+    padding: 50px;
+
+    text-align: center;
+
+    border: 1px solid var(--border);
+
+    background: var(--white);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.07);
+
+    position: relative;
+}
+
+.timelineContent::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    color: rgba(92,155,214,0.35);
+
+    font-size: 20px;
 }
 
 .timelineContentYear {
-    font-size: 10px;
+    color: var(--orange);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
 }
 
 .timelineContent h3 {
+    margin: 12px 0 16px;
+
+    color: var(--dark);
+
+    font-family: var(--fontHeader);
+
     font-size: 34px;
-    margin: 15px 0;
-    color: #171719;
+
+    font-weight: 600;
 }
 
 .timelineContent p {
-    max-width: 750px;
+    max-width: 720px;
+
+    margin: auto;
+
+    color: var(--muted);
+
     font-size: 13px;
+
     line-height: 2;
-    color: #55555b;
 }
 
 
@@ -1289,45 +687,145 @@ body {
    DID YOU KNOW
 ===================================================== */
 
+.factsSection {
+    border-top: 1px solid rgba(0,0,0,0.10);
+}
+
 .factCard {
-    min-height: 430px;
-    padding: 65px;
-    background: #f4f4f4;
+    min-height: 400px;
+
+    padding: 60px;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(244,133,93,0.35);
+
+    background: var(--dark);
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.14);
 }
 
-.factIcon {
-    width: 60px;
-    height: 60px;
-    font-size: 20px;
-}
+.factCard::before {
+    content: "FACT";
 
-.factContent > span {
-    font-size: 9px;
-}
+    position: absolute;
 
-.factContent h3 {
-    max-width: 900px;
-    font-size: 34px;
-    line-height: 1.6;
-    color: #171719;
+    right: -20px;
+    bottom: -45px;
+
+    color: rgba(255,255,255,0.035);
+
+    font-family: var(--fontHeader);
+
+    font-size: 130px;
+
+    font-weight: 900;
+
+    pointer-events: none;
 }
 
 .factNumber {
+    position: absolute;
+
     top: 30px;
     right: 35px;
 }
 
 .factNumber span {
+    color: var(--orange);
+
+    font-family: var(--fontHeader);
+
     font-size: 28px;
 }
 
+.factNumber small {
+    color: #888;
+
+    font-size: 9px;
+}
+
+.factIcon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    border: 1px solid rgba(126,186,238,0.45);
+
+    color: var(--blue);
+
+    background: rgba(126,186,238,0.08);
+
+    font-size: 20px;
+}
+
+.factContent > span {
+    color: var(--blue);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.factContent h3 {
+    max-width: 900px;
+
+    margin-top: 15px;
+
+    color: var(--white);
+
+    font-family: var(--fontHeader);
+
+    font-size: 32px;
+
+    font-weight: 600;
+
+    line-height: 1.6;
+}
+
 .factControls {
+    display: flex;
+
+    gap: 10px;
+
     margin-top: 40px;
 }
 
 .factControls button {
     width: 48px;
     height: 48px;
+
+    border: 1px solid rgba(255,255,255,0.22);
+
+    background: rgba(255,255,255,0.04);
+
+    color: #aaa;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.factControls button:hover {
+    border-color: var(--orange);
+
+    color: var(--orange);
 }
 
 
@@ -1335,41 +833,120 @@ body {
    THEN VS NOW
 ===================================================== */
 
+.comparisonSection {
+    border-top: 1px solid rgba(0,0,0,0.10);
+}
+
 .comparisonGrid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
     gap: 30px;
 }
 
 .comparisonCard {
     min-height: 390px;
+
     padding: 45px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    background: var(--white);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.07);
+
+    transition: 0.25s;
+}
+
+.comparisonCard:hover {
+    transform: translateY(-5px);
+}
+
+.comparisonCard.old {
+    border-top: 4px solid var(--orange);
+}
+
+.comparisonCard.new {
+    border-top: 4px solid var(--blue);
 }
 
 .comparisonTop {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
     margin-bottom: 85px;
 }
 
 .comparisonTop span {
     font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.old .comparisonTop span,
+.old .comparisonTop i {
+    color: var(--orange);
+}
+
+.new .comparisonTop span,
+.new .comparisonTop i {
+    color: var(--blue);
 }
 
 .comparisonYear {
+    color: #888;
+
     font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
 }
 
 .comparisonCard h3 {
+    margin: 10px 0 15px;
+
+    color: var(--dark);
+
+    font-family: var(--fontHeader);
+
     font-size: 30px;
-    color: #171719;
+
+    font-weight: 600;
 }
 
 .comparisonCard p {
     max-width: 500px;
+
+    color: var(--muted);
+
     font-size: 13px;
+
     line-height: 2;
-    color: #55555b;
 }
 
 .comparisonNumber {
+    position: absolute;
+
+    right: 20px;
+    bottom: -5px;
+
+    color: rgba(0,0,0,0.035);
+
+    font-family: var(--fontHeader);
+
     font-size: 120px;
+
+    font-weight: 900;
 }
 
 
@@ -1379,20 +956,57 @@ body {
 
 .archiveNote {
     max-width: 1180px;
-    margin: 20px auto 0;
-    padding: 45px 50px;
-    background: #f1f1f1;
+
+    margin: 30px auto 0;
+
+    padding: 40px 50px;
+
+    border: 1px solid rgba(92,155,214,0.25);
+
+    border-left: 4px solid var(--blue);
+
+    background: var(--white);
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+
+    position: relative;
 }
 
 .archiveNote > span {
+    color: var(--orange);
+
     font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
 }
 
 .archiveNote p {
     max-width: 850px;
-    font-size: 17px;
+
+    margin-top: 12px;
+
+    color: var(--muted);
+
+    font-family: var(--fontHeader);
+
+    font-size: 16px;
+
     line-height: 1.8;
-    color: #55555b;
+}
+
+.noteSymbol {
+    position: absolute;
+
+    right: 35px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: rgba(92,155,214,0.35);
+
+    font-size: 35px;
 }
 
 
@@ -1402,55 +1016,210 @@ body {
 
 .archiveFooter {
     max-width: 1250px;
+
+    margin: auto;
+
     padding: 100px 35px 60px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(0,0,0,0.10);
+}
+
+.footerLine {
+    display: none;
 }
 
 .archiveFooter > span {
-    font-size: 9px;
+    color: #777;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
 }
 
 .archiveFooter p {
-    font-size: 10px;
+    margin: 12px 0 22px;
+
+    color: #888;
+
+    font-size: 9px;
+}
+
+.archiveFooter a {
+    color: var(--orange);
+
+    text-decoration: none;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.archiveFooter a i {
+    margin-left: 6px;
 }
 
 
 /* =====================================================
-   MAKE WHITE PAGE TEXT DARK
+   RESPONSIVE
 ===================================================== */
 
-.archiveSection .sectionHeading h2,
-.earlyText h3,
-.timelineContent h3,
-.factContent h3,
-.comparisonCard h3 {
-    color: #171719;
+@media (max-width: 900px) {
+
+    .earlyGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparisonGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .archiveImage,
+    .archiveImage img {
+        min-height: 380px;
+    }
+
+    .earlyText {
+        padding: 40px;
+    }
+
 }
 
-.archiveSection .sectionHeading p,
-.earlyText > p,
-.timelineContent p,
-.comparisonCard p,
-.archiveNote p {
-    color: #55555b;
-}
 
+@media (max-width: 650px) {
 
-/* =====================================================
-   MORE SPACE ON LARGE SCREENS
-===================================================== */
+    .headerNav {
+        height: 55px;
+    }
 
-@media (min-width: 1200px) {
+    .navContainer {
+        padding: 0 15px;
+    }
+
+    .mainNav {
+        gap: 12px;
+
+        overflow-x: auto;
+    }
+
+    .mainNav a {
+        font-size: 8px;
+    }
 
     .archiveHero {
-        min-height: 650px;
+        min-height: 520px;
     }
 
     .heroContent {
-        padding: 120px 35px;
+        padding: 80px 20px;
     }
 
     .heroContent h1 {
-        font-size: 95px;
+        font-size: 48px;
+    }
+
+    .heroContent h1 span {
+        margin-left: 20px;
+    }
+
+    .archiveSection {
+        padding: 75px 20px;
+    }
+
+    .sectionHeading {
+        padding: 22px;
+        margin-bottom: 40px;
+    }
+
+    .sectionHeading h2 {
+        font-size: 31px;
+    }
+
+    .sectionHeading p {
+        font-size: 11px;
+    }
+
+    .earlyText {
+        padding: 30px;
+    }
+
+    .earlyText h3 {
+        font-size: 30px;
+    }
+
+    .timeline {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        margin-top: 45px;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .timelineItem {
+        display: grid;
+
+        grid-template-columns: 35px 60px 1fr;
+
+        align-items: center;
+
+        text-align: left;
+    }
+
+    .timelineDot {
+        margin: 0;
+    }
+
+    .timelineYear {
+        text-align: left;
+    }
+
+    .timelineTitle {
+        margin-top: 0;
+    }
+
+    .timelineContent {
+        margin-top: 40px;
+
+        padding: 35px 25px;
+    }
+
+    .timelineContent h3 {
+        font-size: 28px;
+    }
+
+    .factCard {
+        min-height: 350px;
+
+        padding: 35px 25px;
+    }
+
+    .factContent h3 {
+        font-size: 23px;
+    }
+
+    .comparisonCard {
+        min-height: 330px;
+
+        padding: 30px;
+    }
+
+    .archiveNote {
+        margin: 0 20px;
+
+        padding: 30px;
+    }
+
+    .noteSymbol {
+        display: none;
     }
 
 }
