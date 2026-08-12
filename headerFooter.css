@@ -31,6 +31,11 @@ body {
   background-blend-mode: multiply;
 }
 
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--textDarkPrimary) var(--welcomeBg); 
+}
+
 /* ==========================================================
    Header Nav
 ========================================================== */
@@ -56,6 +61,7 @@ body {
   box-sizing: border-box;
   width: 100%;
 }
+
 
 .hnBarLeft {
   display: flex;
@@ -258,4 +264,294 @@ body {
 .footerNavGridBtn:hover {
   background-color: var(--currentAccent);
   color: var(--textDarkPrimary);
+}
+
+/* =========================================================
+   TYPE://SOUL GLOBAL ANIMATIONS
+   ========================================================= */
+
+/* ---------- PAGE LOAD ---------- */
+
+body {
+    animation: pageFadeIn 0.7s ease-out both;
+}
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* ---------- HEADER ---------- */
+
+.headerNav {
+    animation: headerDrop 0.7s ease-out both;
+}
+
+@keyframes headerDrop {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ---------- NAVIGATION ---------- */
+
+.hnBarNav {
+    position: relative;
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.hnBarNav::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background: currentColor;
+
+    transform: translateX(-50%);
+
+    transition: width 0.25s ease;
+}
+
+.hnBarNav:hover {
+    transform: translateY(-2px);
+}
+
+.hnBarNav:hover::after,
+.hnBarNav.active::after {
+    width: 100%;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+.mainFooter {
+    animation: footerReveal 1s ease-out both;
+    animation-delay: 0.3s;
+}
+
+@keyframes footerReveal {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   GENERAL CONTENT ANIMATION
+   ========================================================= */
+
+.quizHero,
+.funFactHero,
+.pageHero {
+    animation:
+        heroReveal 0.4s ease-out 0.15s both;
+}
+
+@keyframes heroReveal {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+.quizHero h1,
+.pageHero h1,
+.funFactHero h1 {
+    animation:
+        titleReveal 0.2s cubic-bezier(.2,.8,.2,1) 0.25s both;
+}
+
+@keyframes titleReveal {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+        letter-spacing: 8px;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: normal;
+    }
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.card,
+.factCard,
+.buildCard,
+.communityCard {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.card:hover,
+.factCard:hover,
+.buildCard:hover,
+.communityCard:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   IMAGES
+   ========================================================= */
+
+.card img,
+.factCard img,
+.buildCard img {
+    transition:
+        transform 0.5s ease;
+}
+
+.card:hover img,
+.factCard:hover img,
+.buildCard:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button,
+.btn {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+button:hover,
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+button:active,
+.btn:active {
+    transform: translateY(1px) scale(0.98);
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+    transition:
+        color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   STAGGERED CARDS
+   ========================================================= */
+
+.reveal:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.reveal:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.reveal:nth-child(3) {
+    transition-delay: 0.25s;
+}
+
+.reveal:nth-child(4) {
+    transition-delay: 0.35s;
+}
+
+.reveal:nth-child(5) {
+    transition-delay: 0.45s;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
 }
