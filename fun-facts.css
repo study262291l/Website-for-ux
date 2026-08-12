@@ -1,52 +1,46 @@
 :root {
-  --primaryBg: #121214;
-  --secondaryBg: #1c1c1e;
-  --sidebarBg: #191919;
-  --welcomeBg: #ddd;
+    --primaryBg: #121214;
+    --secondaryBg: #1c1c1e;
+    --sidebarBg: #191919;
+    --welcomeBg: #ddd;
+    --bg: #f7f7f5;
+    --white: #ffffff;
+    --accentRed: #f4855d;
+    --accentBlue: #7EBAEE;
+    --darkRed: #8c4a4a;
+    --textMain: #e0e0e0;
 
-  --lightDark: #444;
-  --lightDarker: #3b3b3b;
+    --dark: #171719;
+    --dark2: #252529;
 
-  --accentRed: #f4855d;
-  --accentBlue: #7EBAEE;
-  --darkRed: #8c4a4a;
+    --text: #343438;
+    --muted: #66666d;
 
-  --textMain: #e0e0e0;
-  --textMain2: #ffffff;
-  --textMuted: #8e8e93;
+    --orange: #f4855d;
+    --blue: #5c9bd6;
 
-  --welcomeBgLight: #e7e5e1;
-  --wCardBg: #ffffff;
-  --wCardDark: #1c1c1e;
-  --textDarkPrimary: #1e1e1f;
-  --textDarkMuted: #6b6b6f;
+    --border: rgba(0, 0, 0, 0.12);
 
-  --fontHeader: 'Cinzel', serif;
-  --fontBody: 'Montserrat', sans-serif;
-  --fontScript: 'Pinyon Script', cursive;
+    --fontHeader: 'Cinzel', serif;
+    --fontBody: 'Montserrat', sans-serif;
 
-  --texture: url('assets/subtle-grunge.png');
-  --textureFlower: url('assets/flower.png');
-
-  --discordBlurple: #5865F2;
-  --discordBlurpleDark: #4752c4;
+    --texture: url('assets/subtle-grunge.png');
+    --textureFlower: url('assets/flower.png');
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+
+/* ==========================================================
+   Page Background
+========================================================== */
 
 body {
-  background-color: var(--welcomeBg);
-  background-image: var(--texture);
-  background-blend-mode: multiply;
-  font-family: var(--fontBody);
-  font-size: 12px;
-  margin: 0;
-  min-height: 100vh;
-  overflow-x: hidden;
+    background-color: var(--bg);
+    background-image: var(--texture);
+    background-blend-mode: multiply;
+}
+
+.archivePage {
+    overflow-x: hidden;
 }
 
 
