@@ -1,0 +1,232 @@
+/* ============================================================
+   LENIS SMOOTH SCROLL
+   ============================================================ */
+
+/* Native CSS fallback */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Override native scroll behavior when Lenis JS is active */
+html.lenis,
+html.lenis body {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* ============================================================
+   SCROLL ANIMATIONS
+   ============================================================ */
+
+/* ============================================================
+   SCROLL DOWN TO SHOW
+   ============================================================ */
+
+.autoShow {
+  animation: textAppear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 100vh;
+}
+
+@keyframes textAppear {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ============================================================
+   IMAGE REVEAL
+   ============================================================ */
+
+.imageReveal {
+  animation: imageReveal both;
+  animation-timeline: view(10% 5%);
+}
+
+@keyframes imageReveal {
+  from {
+    filter: saturate(0) contrast(4) brightness(.1) blur(5px);
+    opacity: 0;
+    scale: .95;
+    translate: 0 4rem;
+  }
+  to {
+    filter: none;
+    opacity: 1;
+    scale: 1;
+    translate: 0 0;
+  }
+}
+
+/* ============================================================
+   IMAGE REVEAL BLUR ENDS FASTER VERSION
+   ============================================================ */
+
+.imageRevealFaster {
+  animation: imageRevealFaster both;
+  animation-timeline: view(60% 5%);
+}
+
+@keyframes imageRevealFaster {
+  from {
+    filter: saturate(0) contrast(4) brightness(.1) blur(5px);
+    opacity: 0;
+    scale: .95;
+    translate: 0 4rem;
+  }
+  to {
+    filter: none;
+    opacity: 1;
+    scale: 1;
+    translate: 0 0;
+  }
+}
+
+/* ============================================================
+   STAGGERED CARD REVEAL FOR FAQ
+   ============================================================ */
+
+.faqCard {
+  animation: staggeredReveal linear both;
+  animation-timeline: view();
+}
+
+.faqCard:nth-child(1) {
+  animation-range: entry 0% cover 20%;
+}
+
+.faqCard:nth-child(2) {
+  animation-range: entry 10% cover 30%;
+}
+
+.faqCard:nth-child(3) {
+  animation-range: entry 20% cover 40%;
+}
+
+.faqCard:nth-child(4) {
+  animation-range: entry 0% cover 20%;
+}
+
+.faqCard:nth-child(5) {
+  animation-range: entry 10% cover 30%;
+}
+
+.faqCard:nth-child(6) {
+  animation-range: entry 20% cover 40%;
+}
+
+.faqCard:nth-child(7) {
+  animation-range: entry 0% cover 20%;
+}
+
+.faqCard:nth-child(8) {
+  animation-range: entry 10% cover 30%;
+}
+
+.faqCard:nth-child(9) {
+  animation-range: entry 20% cover 40%;
+}
+
+.faqCard:nth-child(10) {
+  animation-range: entry 0% cover 20%;
+}
+
+.faqCard:nth-child(11) {
+  animation-range: entry 10% cover 30%;
+}
+
+.faqCard:nth-child(12) {
+  animation-range: entry 20% cover 40%;
+}
+
+/* ============================================================
+   STAGGERED CARD REVEAL FOR FEATURED BUILDS
+============================================================ */
+
+/* .fbCard {
+  animation: staggeredReveal linear both;
+  animation-timeline: view();
+}
+
+.fbCard:nth-child(1) {
+  animation-range: entry 0% cover 20%;
+}
+
+.fbCard:nth-child(2) {
+  animation-range: entry 10% cover 30%;
+}
+
+.fbCard:nth-child(4) {
+  animation-range: entry 20% cover 40%;
+}
+
+.fbCard:nth-child(3) {
+  animation-range: entry 0% cover 20%;
+}
+
+.fbCard:nth-child(5) {
+  animation-range: entry 10% cover 30%;
+}
+
+.fbCard:nth-child(6) {
+  animation-range: entry 20% cover 40%;
+} */
+
+@keyframes staggeredReveal {
+  from {
+    opacity: 0;
+    transform: perspective(1600px) rotateY(35deg) rotateX(25deg) translateY(150px) scale(.55);
+    filter: blur(10px);
+  }
+
+  60% {
+    transform: perspective(1600px) rotateY(-5deg) scale(1.05);
+  }
+
+  to {
+    opacity: 1;
+    transform: perspective(1600px) rotateY(0) rotateX(0) translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* ============================================================
+   FADE UP REVEAL
+   ============================================================ */
+
+.fadeUp {
+  animation: fadeUp both;
+  animation-timeline: view();
+}
+
+.faqSection:nth-child(1) {
+    animation-range:entry 20% cover 40%;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
