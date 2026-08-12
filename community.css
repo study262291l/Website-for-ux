@@ -38,105 +38,15 @@
   padding: 0;
 }
 
-html, body {
-  scroll-behavior: smooth;
-}
-
 body {
   background-color: var(--welcomeBg);
-  background-image: var(-texture);
+  background-image: var(--texture);
   background-blend-mode: multiply;
   font-family: var(--fontBody);
   font-size: 12px;
   margin: 0;
   min-height: 100vh;
   overflow-x: hidden;
-}
-
-/* =====================================================
-   NAVIGATION
-===================================================== */
-
-.headerNav {
-    width: 100%;
-    height: 60px;
-
-    display: flex;
-    align-items: center;
-
-    position: sticky;
-    top: 0;
-
-    z-index: 100;
-
-    background-color: var(--white, #ffffff);
-    background-image: var(--textureFlower);
-    background-position: center;
-
-    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
-
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
-}
-
-
-.navContainer {
-    width: 100%;
-    max-width: 1250px;
-
-    margin: auto;
-    padding: 0 30px;
-
-    display: flex;
-    align-items: center;
-}
-
-
-.navHomeIcon {
-    color: var(--accentRed);
-
-    font-size: 15px;
-
-    margin-right: 25px;
-
-    text-decoration: none;
-}
-
-
-.mainNav {
-    display: flex;
-
-    gap: 25px;
-}
-
-
-.mainNav a {
-    color: #66666b;
-
-    text-decoration: none;
-
-    font-size: 10px;
-    font-weight: 700;
-
-    text-transform: uppercase;
-    letter-spacing: 1px;
-
-    display: flex;
-    align-items: center;
-
-    gap: 7px;
-
-    transition: 0.25s;
-}
-
-
-.mainNav a i {
-    color: var(--accentRed);
-}
-
-
-.mainNav a:hover,
-.mainNav a.active {
-    color: #171719;
 }
 
 .wCard {
@@ -159,18 +69,14 @@ body {
    COMMUNITY PAGE (Discord + Roblox game + Roblox group)
    ============================================================ */
 
-.discordPage {
+.discordWrapper {
   position: relative;
-  background-color: var(--welcomeBgLight);
-  padding: 40px 20px 60px;
-  min-height: calc(100vh - 56px);
+  width: 100%;
   overflow: hidden;
 }
 
-/* Subtle blurred background image */
-.discordPage::before {
-  content: "";
-  position: fixed;
+.bgImage {
+  position: absolute;
   inset: -10px;
   background: url('assets/watercolor.jpg') no-repeat center center;
   background-size: cover;
@@ -179,10 +85,8 @@ body {
   pointer-events: none;
 }
 
-/* Dark vignette overlay */
-.discordPage::after {
-  content: "";
-  position: fixed;
+.bgOverlay {
+  position: absolute;
   inset: 0;
   background: radial-gradient(
     circle at center,
@@ -193,6 +97,14 @@ body {
   pointer-events: none;
 }
 
+
+.discordPage {
+  position: relative;
+  z-index: 2;
+  background-color: transparent; 
+  padding: 40px 20px 60px;
+  min-height: calc(100vh - 56px);
+}
 .discordContainer {
   position: relative;
   z-index: 2;
@@ -203,20 +115,31 @@ body {
   gap: 24px;
 }
 
-/* Hero banner */
 .discordHeroBanner {
-  background-color: var(--wCardDark);
+  position: relative;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 10, 15, 0.88),
+      rgba(10, 10, 15, 0.55)
+    ),
+    url('assets/watercolor.jpg') center / cover no-repeat;
+
   border-radius: 14px;
   padding: 28px 32px;
+  min-height: 180px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  overflow: hidden;
   flex-wrap: wrap;
 }
-
 .discordHeroInfo {
   display: flex;
   align-items: center;
