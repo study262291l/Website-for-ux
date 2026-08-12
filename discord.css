@@ -1,0 +1,1312 @@
+:root {
+  --primaryBg: #121214;
+  --secondaryBg: #1c1c1e;
+  --sidebarBg: #F0A06F;
+  --welcomeBg: #242426;
+
+  --lightDark: #444;
+  --lightDarker: #3b3b3b;
+
+  --accentRed: #f4855d;
+  --accentBlue: #7EBAEE;
+  --darkRed: #8c4a4a;
+
+  --textMain: #e0e0e0;
+  --textMain2: #ffffff;
+  --textMuted: #8e8e93;
+
+  --welcomeBgLight: #e7e5e1;
+  --wCardBg: #ffffff;
+  --wCardDark: #1c1c1e;
+  --textDarkPrimary: #1e1e1f;
+  --textDarkMuted: #6b6b6f;
+
+  --fontHeader: 'Cinzel', serif;
+  --fontBody: 'Montserrat', sans-serif;
+  --fontScript: 'Pinyon Script', cursive;
+
+  --texture: url('assets/subtle-grunge.png');
+  --textureFlower: url('assets/flower.png');
+
+  --discordBlurple: #5865F2;
+  --discordBlurpleDark: #4752c4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--primaryBg);
+  color: var(--textMain);
+  font-family: var(--fontBody);
+  font-size: 12px;
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Top Navigation Bar */
+.headerNav {
+  width: 100%;
+  height: 56px;
+  background-color: var(--textMain2);
+  border-bottom: px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-image: var(--textureFlower);
+  background-position: center;
+}
+
+.navContainer {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.navHomeIcon {
+  color: var(--accentRed);
+  font-size: 14px;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.mainNav {
+  display: flex;
+  gap: 20px;
+}
+
+.mainNav a {
+  color: var(--textMuted);
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+}
+
+.mainNav a i {
+  color: var(--accentRed);
+}
+
+.mainNav a:hover {
+  color: var(--textMain2);
+}
+
+.wCard {
+  background-color: var(--wCardBg);
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.wStatsBar {
+  background-color: var(--wCardDark);
+  color: var(--textMain2);
+  font-family: var(--fontHeader);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 12px 16px;
+}
+
+/* ============================================================
+   COMMUNITY PAGE (Discord + Roblox game + Roblox group)
+   ============================================================ */
+
+.discordPage {
+  position: relative;
+  background-color: var(--welcomeBgLight);
+  padding: 40px 20px 60px;
+  min-height: calc(100vh - 56px);
+  overflow: hidden;
+}
+
+/* Subtle blurred background image */
+.discordPage::before {
+  content: "";
+  position: fixed;
+  inset: -10px;
+  background: url('assets/watercolor.jpg') no-repeat center center;
+  background-size: cover;
+  filter: blur(8px) brightness(0.75);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Dark vignette overlay */
+.discordPage::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(15, 16, 21, 0.2) 20%,
+    rgba(15, 16, 21, 0.85) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.discordContainer {
+  position: relative;
+  z-index: 2;
+  max-width: 1040px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Hero banner */
+.discordHeroBanner {
+  background-color: var(--wCardDark);
+  border-radius: 14px;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  flex-wrap: wrap;
+}
+
+.discordHeroInfo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 650px;
+}
+
+.discordServerAvatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background-color: var(--discordBlurple);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(88, 101, 242, 0.35);
+}
+
+.discordTagRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.discordPillTag {
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--accentRed);
+  text-transform: uppercase;
+  background: rgba(244, 133, 93, 0.12);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.discordOnlineIndicator {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.greenDot {
+  width: 7px;
+  height: 7px;
+  background-color: #23a55a;
+  border-radius: 50%;
+}
+
+.discordTitle {
+  font-family: var(--fontHeader);
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 4px 0 8px 0;
+
+  background: linear-gradient(
+    180deg,
+    #e0f2fe 0%,
+    #38bdf8 45%,
+    #0284c7 70%,
+    #0369a1 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.8));
+}
+
+.discordDesc {
+  font-size: 11px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Platform cards: Discord / Roblox game / Roblox group */
+.discordPlatformsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.discordPlatformCard {
+  background-color: var(--wCardBg);
+  border-radius: 14px;
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.discordPlatformIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.discordPlatformIcon.iconDiscord {
+  background-color: var(--discordBlurple);
+  box-shadow: 0 6px 16px rgba(88, 101, 242, 0.35);
+}
+
+.discordPlatformIcon.iconRobloxGame {
+  background-color: var(--accentRed);
+  box-shadow: 0 6px 16px rgba(244, 133, 93, 0.35);
+}
+
+.discordPlatformIcon.iconRobloxGroup {
+  background-color: #23272a;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.discordPlatformTitle {
+  font-family: var(--fontHeader);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--textDarkPrimary);
+  margin-bottom: 8px;
+}
+
+.discordPlatformDesc {
+  font-size: 10.5px;
+  line-height: 1.6;
+  color: var(--textDarkMuted);
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.discordPlatformActions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.discordPlatformBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 10.5px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  color: #ffffff;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.2s ease;
+}
+
+.discordPlatformBtn:hover {
+  transform: translateY(-1px);
+  opacity: 0.92;
+}
+
+.discordPlatformBtn.btnDiscord {
+  background-color: var(--discordBlurple);
+}
+
+.discordPlatformBtn.btnRobloxGame {
+  background-color: var(--accentRed);
+}
+
+.discordPlatformBtn.btnRobloxGroup {
+  background-color: #23272a;
+}
+
+.discordPlatformGhostBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 10px;
+  background-color: rgba(0, 0, 0, 0.04);
+  color: var(--textDarkPrimary);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.discordPlatformGhostBtn:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.discordPlatformGhostBtn.copied {
+  background-color: #23a55a;
+  color: #ffffff;
+  border-color: #23a55a;
+}
+
+
+.discordSectionCard {
+  overflow: hidden;
+}
+
+/* Live activity feed */
+.discordFeedList {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.discordFeedMsg {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.discordFeedAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fontHeader);
+  font-weight: 700;
+  font-size: 12px;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.discordFeedBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.discordFeedTop {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 3px;
+}
+
+.discordFeedUser {
+  font-weight: 700;
+  font-size: 11px;
+  color: var(--textDarkPrimary);
+}
+
+.discordFeedRole {
+  font-size: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.discordFeedRole.mod {
+  background: rgba(244, 133, 93, 0.15);
+  color: var(--accentRed);
+}
+
+.discordFeedRole.member {
+  background: rgba(88, 101, 242, 0.12);
+  color: var(--discordBlurple);
+}
+
+.discordFeedChannel {
+  font-size: 9px;
+  color: var(--textDarkMuted);
+}
+
+.discordFeedTime {
+  font-size: 9px;
+  color: var(--textDarkMuted);
+  margin-left: auto;
+}
+
+.discordFeedText {
+  font-size: 10.5px;
+  line-height: 1.55;
+  color: var(--textDarkMuted);
+}
+
+
+/* Toast (used by the "Copy Link" buttons) */
+.discordToast {
+  position: fixed;
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background-color: var(--wCardDark);
+  color: var(--textMain2);
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  padding: 10px 18px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 50;
+}
+
+.discordToast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.discordToast i {
+  color: #3ba55d;
+}
+
+
+@media (max-width: 700px) {
+  .discordPlatformsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Join Modal ---- */
+.discordModalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 12, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 100;
+  padding: 20px;
+}
+
+.discordModalOverlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.discordModal {
+  background-color: var(--wCardBg);
+  border-radius: 16px;
+  padding: 32px 28px 28px;
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  transform: translateY(16px) scale(0.97);
+  transition: transform 0.25s ease;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.discordModalOverlay.show .discordModal {
+  transform: translateY(0) scale(1);
+}
+
+.discordModalClose {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: var(--textDarkMuted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  transition: background-color 0.2s ease;
+}
+
+.discordModalClose:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.discordModalIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.discordModalTitle {
+  font-family: var(--fontHeader);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--textDarkPrimary);
+  margin-bottom: 10px;
+}
+
+.discordModalDesc {
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--textDarkMuted);
+  margin-bottom: 22px;
+}
+
+.discordModalActions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.discordModalBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: var(--accentRed);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.2s ease;
+}
+
+.discordModalBtn:hover {
+  transform: translateY(-1px);
+  opacity: 0.92;
+}
+
+.discordModalGhostBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 10.5px;
+  background-color: rgba(0, 0, 0, 0.04);
+  color: var(--textDarkPrimary);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.discordModalGhostBtn:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.discordModalGhostBtn.copied {
+  background-color: #23a55a;
+  color: #ffffff;
+  border-color: #23a55a;
+}
+
+/* ---- Community Hub (tabs) ---- */
+.hubCard {
+  overflow: hidden;
+}
+
+.hubTabs {
+  display: flex;
+  background-color: var(--wCardDark);
+}
+
+.hubTab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 16px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-family: var(--fontBody);
+  font-weight: 700;
+  font-size: 10.5px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.hubTab i {
+  font-size: 12px;
+}
+
+.hubTab:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.hubTab.active {
+  color: #ffffff;
+  border-bottom-color: var(--tabColor);
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.hubPanel {
+  display: none;
+  padding: 20px 18px 24px;
+}
+
+.hubPanel.active {
+  display: block;
+}
+
+.hubPanelEyebrow {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--textDarkMuted);
+  margin-bottom: 14px;
+}
+
+/* Discord feed (unchanged from before) */
+.discordFeedList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.discordFeedMsg {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.discordFeedAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fontHeader);
+  font-weight: 700;
+  font-size: 12px;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.discordFeedBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.discordFeedTop {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 3px;
+}
+
+.discordFeedUser {
+  font-weight: 700;
+  font-size: 11px;
+  color: var(--textDarkPrimary);
+}
+
+.discordFeedRole {
+  font-size: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.discordFeedRole.mod {
+  background: rgba(244, 133, 93, 0.15);
+  color: var(--accentRed);
+}
+
+.discordFeedRole.member {
+  background: rgba(88, 101, 242, 0.12);
+  color: var(--discordBlurple);
+}
+
+.discordFeedChannel {
+  font-size: 9px;
+  color: var(--textDarkMuted);
+}
+
+.discordFeedTime {
+  font-size: 9px;
+  color: var(--textDarkMuted);
+  margin-left: auto;
+}
+
+.discordFeedText {
+  font-size: 10.5px;
+  line-height: 1.55;
+  color: var(--textDarkMuted);
+}
+
+/* Game panel */
+.gameStatsRow {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.gameStat {
+  flex: 1;
+  min-width: 110px;
+  position: relative;
+  background: rgba(244, 133, 93, 0.06);
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+}
+
+.gameStatDot {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #23a55a;
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0% { box-shadow: 0 0 0 0 rgba(35, 165, 90, 0.5); }
+  70% { box-shadow: 0 0 0 6px rgba(35, 165, 90, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(35, 165, 90, 0); }
+}
+
+.gameStatNum {
+  font-family: var(--fontHeader);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--textDarkPrimary);
+}
+
+.gameStatLabel {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--textDarkMuted);
+  margin-top: 4px;
+}
+
+.gameLeaderboard {
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 10px;
+  padding: 4px 14px;
+}
+
+.gameLbHeader {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--textDarkMuted);
+  padding: 10px 0 6px;
+}
+
+.gameLbRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 11px;
+}
+
+.gameLbRank {
+  font-family: var(--fontHeader);
+  font-weight: 700;
+  color: var(--accentRed);
+  width: 16px;
+}
+
+.gameLbName {
+  flex: 1;
+  font-weight: 600;
+  color: var(--textDarkPrimary);
+}
+
+.gameLbScore {
+  font-size: 10px;
+  color: var(--textDarkMuted);
+}
+
+/* Group panel */
+.groupStatsRow {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.groupStat {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+}
+
+.groupStatNum {
+  font-family: var(--fontHeader);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--textDarkPrimary);
+}
+
+.groupStatLabel {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--textDarkMuted);
+  margin-top: 4px;
+}
+
+.groupRankLadder {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.groupRankRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  border-left: 3px solid #23272a;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 0 8px 8px 0;
+}
+
+.groupRankName {
+  font-family: var(--fontHeader);
+  font-weight: 700;
+  font-size: 11px;
+  color: var(--textDarkPrimary);
+  min-width: 68px;
+}
+
+.groupRankPerk {
+  font-size: 10px;
+  color: var(--textDarkMuted);
+  text-align: right;
+}
+
+/* ============================================================
+   NEW COMMUNITY CONTENT SECTIONS
+   ============================================================ */
+
+.communitySection { width: 100%; }
+
+.communitySectionHeading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  padding: 0 2px;
+}
+
+.centeredHeading { text-align: center; justify-content: center; }
+
+.communityEyebrow {
+  color: var(--accentRed);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.communityEyebrow i { margin-right: 5px; }
+
+.communitySectionTitle {
+  color: #ffffff;
+  font-family: var(--fontHeader);
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.communitySectionDesc {
+  color: rgba(255,255,255,0.58);
+  font-size: 10px;
+  line-height: 1.6;
+  margin-top: 6px;
+}
+
+.creatorGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.creatorCard {
+  background: var(--wCardBg);
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+  box-shadow: 0 7px 20px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.creatorCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+}
+
+.creatorAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: var(--fontHeader);
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.creatorAvatarOne { background: linear-gradient(135deg,#5865F2,#3945a8); }
+.creatorAvatarTwo { background: linear-gradient(135deg,#f4855d,#a94d32); }
+.creatorAvatarThree { background: linear-gradient(135deg,#7EBAEE,#3d76a8); }
+
+.creatorInfo { flex: 1; min-width: 0; }
+
+.creatorInfo h3 {
+  color: var(--textDarkPrimary);
+  font-family: var(--fontHeader);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .7px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.creatorInfo span {
+  color: var(--textDarkMuted);
+  font-size: 8.5px;
+  display: block;
+}
+
+.creatorInfo span i { color: #ff0000; margin-right: 4px; }
+
+.creatorButton,
+.videoChannelButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 7px;
+  padding: 8px 10px;
+  background: #23272a;
+  color: #fff;
+  text-decoration: none;
+  font-size: 8.5px;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: transform .15s ease, opacity .2s ease;
+}
+
+.creatorButton:hover,
+.videoChannelButton:hover { transform: translateY(-1px); opacity: .9; }
+
+.videoShowcase {
+  background: var(--wCardBg);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,.09);
+}
+
+.videoPlayer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 8.5;
+  background: #09090b;
+  overflow: hidden;
+}
+
+.videoPlayer iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.videoPlaceholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at center,rgba(244,133,93,.18),transparent 35%),
+    linear-gradient(135deg,#101114,#202228);
+}
+
+.videoPlayButton {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--accentRed);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 3px;
+  font-size: 21px;
+  cursor: pointer;
+  box-shadow: 0 0 0 8px rgba(244,133,93,.12),0 10px 30px rgba(0,0,0,.35);
+  transition: transform .2s ease, box-shadow .2s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.videoPlayButton:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 0 11px rgba(244,133,93,.12),0 12px 34px rgba(0,0,0,.42);
+}
+
+.videoPlaceholderText {
+  position: absolute;
+  left: 20px;
+  bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.videoPlaceholderText span,
+.videoLabel {
+  color: var(--accentRed);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.videoPlaceholderText strong {
+  color: #fff;
+  font-family: var(--fontHeader);
+  font-size: 14px;
+}
+
+.videoPlaceholderText small {
+  color: rgba(255,255,255,.5);
+  font-size: 8px;
+}
+
+.videoInfo {
+  padding: 17px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.videoInfo h3 {
+  color: var(--textDarkPrimary);
+  font-family: var(--fontHeader);
+  font-size: 14px;
+  margin: 4px 0 5px;
+}
+
+.videoInfo p {
+  color: var(--textDarkMuted);
+  font-size: 9.5px;
+  line-height: 1.55;
+}
+
+.videoChannelButton {
+  background: var(--accentRed);
+  padding: 10px 13px;
+}
+
+.guidePreviewGrid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 14px;
+}
+
+.guidePreviewCard {
+  min-height: 118px;
+  padding: 18px;
+  border-radius: 14px;
+  background: var(--wCardBg);
+  color: var(--textDarkPrimary);
+  text-decoration: none;
+  box-shadow: 0 7px 20px rgba(0,0,0,.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.guidePreviewCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.14);
+}
+
+.guideIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: rgba(244,133,93,.12);
+  color: var(--accentRed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+.guideTitle {
+  font-family: var(--fontHeader);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .7px;
+}
+
+.guideAction {
+  margin-top: auto;
+  color: var(--textDarkMuted);
+  font-size: 8.5px;
+  font-weight: 700;
+}
+
+.guideAction i { margin-left: 4px; color: var(--accentRed); }
+
+.spotlightGrid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 16px;
+}
+
+.spotlightCard {
+  background: var(--wCardBg);
+  border-radius: 14px;
+  padding: 19px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 7px 20px rgba(0,0,0,.08);
+}
+
+.spotlightIcon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: rgba(244,133,93,.12);
+  color: var(--accentRed);
+  font-size: 18px;
+}
+
+.spotlightLabel {
+  color: var(--accentRed);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.spotlightCard h3 {
+  color: var(--textDarkPrimary);
+  font-family: var(--fontHeader);
+  font-size: 12px;
+  margin: 4px 0;
+}
+
+.spotlightCard p { color: var(--textDarkMuted); font-size: 9px; }
+
+@media (max-width: 850px) {
+  .creatorGrid { grid-template-columns: 1fr; }
+  .guidePreviewGrid { grid-template-columns: repeat(2,1fr); }
+}
+
+@media (max-width: 600px) {
+  .videoInfo { align-items: flex-start; flex-direction: column; }
+  .videoChannelButton { width: 100%; }
+  .guidePreviewGrid, .spotlightGrid { grid-template-columns: 1fr; }
+}

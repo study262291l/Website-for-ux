@@ -1,0 +1,584 @@
+:root {
+
+    --bg: #0b0d11;
+    --panel: #141820;
+    --panelDark: #0d1015;
+
+    --border: rgba(255, 255, 255, 0.08);
+
+    --text: #f2f4f7;
+    --muted: #8d949f;
+
+    --blue: #38bdf8;
+    --red: #f4855d;
+
+    --fontTitle: "Cinzel", serif;
+    --fontBody: "Montserrat", sans-serif;
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    font-family: var(--fontBody);
+
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.headerNav {
+
+    height: 56px;
+
+    background: #0d0e12;
+
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+}
+
+
+.navContainer {
+
+    max-width: 1040px;
+
+    height: 100%;
+
+    margin: auto;
+
+    padding: 0 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+}
+
+
+.navHomeIcon {
+
+    width: 32px;
+
+    height: 32px;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    background: rgba(255,255,255,0.06);
+
+    text-decoration: none;
+
+}
+
+
+.navHomeIcon:hover {
+
+    color: var(--red);
+
+}
+
+
+.mainNav {
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+}
+
+
+.mainNav a {
+
+    height: 100%;
+
+    padding: 0 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: rgba(255,255,255,0.55);
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    border-bottom: 2px solid transparent;
+
+}
+
+
+.mainNav a:hover,
+
+.mainNav a.active {
+
+    color: white;
+
+    border-bottom-color: var(--red);
+
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.responsePage {
+
+    min-height: calc(100vh - 56px);
+
+    padding: 70px 20px;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(56,189,248,0.08),
+            transparent 40%
+        );
+
+}
+
+
+.responseContainer {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+
+/* =========================
+   SUCCESS
+========================= */
+
+.successIcon {
+
+    width: 52px;
+
+    height: 52px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--blue);
+
+    background: rgba(56,189,248,0.08);
+
+    border: 1px solid rgba(56,189,248,0.2);
+
+}
+
+
+.responseEyebrow {
+
+    color: var(--blue);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.responseContainer h1 {
+
+    margin: 10px 0;
+
+    font-family: var(--fontTitle);
+
+    font-size: 36px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.titleLine {
+
+    width: 70px;
+
+    height: 2px;
+
+    margin: 18px auto;
+
+    background: var(--blue);
+
+}
+
+
+.responseIntro {
+
+    max-width: 520px;
+
+    margin: auto;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================
+   SUBMISSION CARD
+========================= */
+
+.submissionCard {
+
+    margin-top: 40px;
+
+    text-align: left;
+
+    background: var(--panel);
+
+    border: 1px solid var(--border);
+
+}
+
+
+.cardHeader {
+
+    padding: 17px 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: var(--panelDark);
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.cardHeader span {
+
+    color: var(--blue);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.cardHeader i {
+
+    color: #555e69;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================
+   DATA GRID
+========================= */
+
+.dataGrid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+}
+
+
+.dataItem {
+
+    padding: 20px;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.dataItem:nth-child(odd) {
+
+    border-right: 1px solid var(--border);
+
+}
+
+
+.dataItem.fullWidth {
+
+    grid-column: 1 / -1;
+
+    border-right: 0;
+
+}
+
+
+.dataLabel {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #626b76;
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+
+}
+
+
+.dataItem strong {
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+.dataItem p {
+
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================
+   INTEREST TAGS
+========================= */
+
+.interestDisplay {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+}
+
+
+.interestTag {
+
+    padding: 7px 10px;
+
+    color: var(--blue);
+
+    background: rgba(56,189,248,0.08);
+
+    border: 1px solid rgba(56,189,248,0.16);
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.responseActions {
+
+    margin-top: 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 8px;
+
+}
+
+
+.responseActions a {
+
+    min-height: 40px;
+
+    padding: 0 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    text-decoration: none;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.6px;
+
+}
+
+
+.backButton {
+
+    color: #071016;
+
+    background: var(--blue);
+
+}
+
+
+.homeButton {
+
+    color: #8d949f;
+
+    background: var(--panel);
+
+    border: 1px solid var(--border);
+
+}
+
+
+.responseActions a:hover {
+
+    opacity: 0.85;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .navContainer {
+
+        padding: 0 12px;
+
+        gap: 10px;
+
+    }
+
+
+    .mainNav {
+
+        overflow-x: auto;
+
+    }
+
+
+    .mainNav a {
+
+        padding: 0 8px;
+
+        white-space: nowrap;
+
+        font-size: 8px;
+
+    }
+
+
+    .responsePage {
+
+        padding: 45px 14px;
+
+    }
+
+
+    .responseContainer h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    .dataGrid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .dataItem:nth-child(odd) {
+
+        border-right: 0;
+
+    }
+
+
+    .dataItem.fullWidth {
+
+        grid-column: auto;
+
+    }
+
+
+    .responseActions {
+
+        flex-direction: column;
+
+    }
+
+}

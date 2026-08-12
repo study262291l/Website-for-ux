@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Type soul</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Montserrat:wght@400;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+  <header class="headerNav">
+    <div class="navContainer">
+        <a href="home.html" class="navHomeIcon">
+            <i class="fa-solid fa-house"></i>
+        </a>
+
+        <nav class="mainNav">
+            <a href="builds.html">
+                <i class="fa-solid fa-scroll"></i> 
+                Guides 
+            </a>
+
+            <a href="game-info.html">
+                <i class="fa-solid fa-circle-info"></i>
+                Game Info
+            </a>
+
+            <a href="fun-facts.html" class="active">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                Fun Facts
+            </a>
+
+            <a href="discord.html">
+                <i class="fa-solid fa-people-group"></i>
+                Community
+            </a>
+        
+      </nav>
+    </div>
+  </header>
+
+  <div class="heroSection" id="heroSection">
+    
+    <aside class="heroLeft">
+
+      <div class="heroLeftIntro">
+        <span class="heroLeftIcon">✦</span>
+        <p class="heroLeftQuote">Type soul is a game based on "bleach". It features many races such as soul reaper, quincy, arrancars and fullbringers.</p>
+
+        <div class="heroLeftTitleRow">
+          <h1 class="heroLeftTitle">Soul reapers</h1> <h1 class="heroLeftTitleStar">✦</h1>
+          <span class="heroLeftTitleLine"></span>
+        </div>
+
+        
+        <div class="heroLeftWelcomeSection">
+          <div class="heroLeftWelcomeText">
+            In Type Soul, Soul Reapers (Shinigami) are one of the primary playable races <i>relying on spiritual pressure and swordplay</i> Players begin as Academy Students and advance by refining their combat skills, flash steps, and Zanpakuto mastery. <i>A Soul Reaper's power spikes significantly upon unlocking Shikai,</i> achieved by meditating and defeating their inner spirit to gain elemental powers. <i>True mastery culminates in unlocking Bankai,</i> granting immense area-of-effect damage, distinctive weapon forms, and devastating ultimate abilities. Balancing high-speed melee strikes, Kido spells, and versatile skill trees, Soul Reapers excel as <i>versatile, high-mobility combatants</i> in both competitive PvP and faction battles.
+          </div>
+        </div>
+      </div>
+
+      <div class="heroLeftGrid">
+
+        <div class="heroLeftRegistry">
+          <div class="registryHeaderRow">
+            <h2 class="registryTitle">shikai<br>registry</h2>
+            <p class="registryQuote">
+              Every reiatsu takes a different shape once it's set free. Some crystallize into ice, some into flame and some refuse to take a shape at all.
+            </p>
+          </div>
+
+          <div class="registryLinksRow">
+
+            <a href="#">SHIKAI GUIDE</a>
+            <span class="registryLinksDots"></span>
+            <a href="#">BANKAI GUIDE</a>
+            <span class="registryLinksDots"></span>
+            <a href="#">BUILD GUIDES</a>
+            
+          </div>
+
+          <div class="registryGrid">
+            <!-- <div class="registryChip registryMythicalSnow"><span class="registryChipName">Snow</span><span class="registryChipDots"></span><span class="registryChipPlus">＋</span></div>
+            <div class="registryChip registryLegendary"><span class="registryChipName">Blood</span><span class="registryChipDots"></span><span class="registryChipPlus">＋</span></div>
+            <div class="registryChip registryRare"><span class="registryChipName">Water</span><span class="registryChipDots"></span><span class="registryChipPlus">＋</span></div>
+            <div class="registryChip"><span class="registryChipName">Shadow</span><span class="registryChipDots"></span><span class="registryChipPlus">＋</span></div>
+            <div class="registryChip registryLegendary"><span class="registryChipName">Ice</span><span class="registryChipDots"></span><span class="registryChipPlus">＋</span></div>
+            <div class="registryChip registryRare"><span class="registryChipName">Fire</span><span class="registryChipDots"></span><span class="registryChipPlus">＋</span></div>
+            <div class="registryChip registryLegendary"><span class="registryChipName">Ink</span><span class="registryChipDots"></span><span class="registryChipPlus">＋</span></div>
+            <div class="registryChip registryMythicalAizen"><span class="registryChipName">Kyōka Suigetsu</span><span class="registryChipDots"></span><span class="registryChipPlus">＋</span></div>
+            <div class="registryChip"><span class="registryChipName">Lightning</span><span class="registryChipDots"></span><span class="registryChipPlus">＋</span></div>
+            <div class="registryChip registryLegendary"><span class="registryChipName">Flower</span><span class="registryChipDots"></span><span class="registryChipPlus">＋</span></div>
+            <div class="registryChip registryMythicalBenihime"><span class="registryChipName">Benihime</span><span class="registryChipDots"></span><span class="registryChipPlus">＋</span></div>
+            <div class="registryChip"><span class="registryChipName">Wind</span><span class="registryChipDots"></span><span class="registryChipPlus">＋</span></div>
+            <div class="registryChip registryRare"><span class="registryChipName">Zangetsu</span><span class="registryChipDots"></span><span class="registryChipPlus">＋</span></div>
+            <div class="registryChip registryRare"><span class="registryChipName">Shinso</span><span class="registryChipDots"></span><span class="registryChipPlus">＋</span></div> -->
+          </div>
+
+        <span class="heroLeftTitleLine"></span>
+
+        <div class="heroLeftNewsCol">
+          <p class="heroLeftNewsQuote">Type soul's soul reaper faction.</p>
+          <div class="heroLeftNewsTitleRow">
+            <span class="heroLeftNewsTitleLine"></span>
+            <h2 class="heroLeftNewsTitle">august</h2>
+          </div>
+          <p class="heroLeftNewsText">
+            Join Type Soul's <a href="#">DISCORD</a>, To learn more about the game and it's on goings. Its a very toxic community so do NOT expect help. But there are useful informations and links such as the trello.
+          </p>
+        </div>
+      </div>
+
+    </aside>
+
+    <main class="heroCenter">
+      
+      <section class="heroBanner">
+        <div class="bannerTextContainer">
+          <h1 class="mainTitle">TYPE <span class="accentTag">❖</span></h1>
+          <h1 class="mainTitleLarge">SOUL</h1>
+          <p class="subTitle">AN EXTREMELY <span class="highlightText">COMPETITIVE</span> <br> ROBLOX GAME</p>
+        </div>
+      </section>
+
+      <div class="bannerCharacterImage">
+        <img src="assets/ichigoBanner.png" alt="Banner Render" class="characterRender">
+      </div>
+
+      <div class="lilSectionBar" id="aboutSection">
+        <div class="lilSectionBarInner">
+          <span class="lilSectionBarInfo">RACES / ABOUT</span>
+        </div>
+      </div>
+
+      <section class="infoBanner" id="racesSection">
+        <div class="infoBannerContent">
+            <div class="infoBannerText">
+                <span class="infoBannerEyebrow">
+                    CLICK TO VIEW EACH
+                </span>
+                <h2 class="infoBannerTitle">
+                    Race
+                </h2>
+            </div>
+            <p class="infoBannerDescription">
+                Type Soul is home to four core races, each with their own mechanics and playstyle. Soul Reapers rely on Zanpakuto and spiritual pressure, Arrancars channel Hollow power through Resurreccion, Quincy master ranged Reishi combat, and Fullbringers draw strength from the objects around them.
+            </p>
+            <div class="infoBannerButtons">
+                <a href="#" class="active">Soul Reapers</a>
+                <a href="#">Arrancars</a>
+                <a href="#">Quincy</a>
+                <a href="#">Fullbringers</a>
+            </div>
+        </div>
+      </section>
+      
+      <section class="gettingStartedSection">
+      
+        <div class="gsHeaderBanner">
+          <div class="gsHeaderContent">
+            <div class="gsHeaderAccent"></div>
+            <div>
+              <h2 class="gsHeaderTitle">GETTING STARTED</h2>
+              <p class="gsHeaderSub">THERE SIGNS, COMPLAINTS, AND ULULATIONS LOUD RESOUNDED THROUGH THE AIR WITHOUT A STAR, WHENCE I, AT THE BEGINNING, WEPT THEREAT.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gsCardsGrid">
+
+          <div class="gsCard">
+            <div class="gsCardTopSection">
+              <span class="gsCardBadge">GUIDE</span>
+              <div class="gsCardTags">
+                <span>RACES</span> • <span>ELEMENTS</span>
+              </div>
+            </div>
+
+            <div class="gsCardBody">
+              <div class="gsCardMainInfo">
+                <h3 class="gsCardTitle">CHOOSING<br>YOUR RACE</h3>
+              </div>
+
+              <div class="gsCardContentRow">
+
+                <div class="gsCardRightDesc">
+                  <p class="gsCardDescText">
+                    Do you need help with choosing your race? Click the buttons in the [RACES / ABOUT] section. Click the buttons in the <br> <span> <<<<< </span> registry to learn more.
+                  </p>
+                  <div class="gsCardDivider"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gsCard">
+            <div class="gsCardTopSection">
+              <span class="gsCardBadge">Guide</span>
+              <div class="gsCardTags">
+                <span>BUILDS</span> • <span>ELEMENTS</span> • <span>STATS</span> • <span>SKILL TREE</span>
+              </div>
+            </div>
+
+            <div class="gsCardBody">
+              <div class="gsCardMainInfo">
+                <h3 class="gsCardTitle">BUILD<br>TUTORIAL</h3>
+              </div>
+
+              <div class="gsCardContentRow">
+                <div class="gsCardLeftMeta">
+                  
+                  <div class="gsCardDots"></div>
+                  <div class="gsMetaStat">
+                    <span class="gsMetaLabel">BUILDS</span>
+                    <span class="gsMetaVal">15 POSTED</span>
+                  </div>
+                </div>
+
+                <div class="gsCardRightDesc">
+                  <p class="gsCardDescText">
+                    Done with deciding your race? Now you can focus on your build! This is the most important feature of <i>Type Soul</i>. Click the link below to view our guide.
+                  </p>
+                  <div class="gsCardDivider"></div>
+                  <div class="gsCardFooterMeta">
+                    <a href="#" class="gsFootStuff">BUILD GUIDES</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gsCard">
+            <div class="gsCardTopSection">
+              <span class="gsCardBadge">QUIZ</span>
+              <div class="gsCardTags">
+                <span>QUIZ</span> • <span>INFORMATION</span>
+              </div>
+            </div>
+
+            <div class="gsCardBody">
+              <div class="gsCardMainInfo">
+                <h3 class="gsCardTitle">INFORMATION<br>QUIZ</h3>
+              </div>
+
+              <div class="gsCardContentRow">
+                <div class="gsCardLeftMeta">
+                  
+                  <div class="gsCardDots"></div>
+                  <div class="gsMetaStat">
+                    <span class="gsMetaLabel">QUESTIONS</span>
+                    <span class="gsMetaVal">20 POSTED</span>
+                  </div>
+                  <div class="gsMetaStat">
+                    <span class="gsMetaLabel">POSTS</span>
+                    <span class="gsMetaVal">000 written</span>
+                  </div>
+                </div>
+
+                <div class="gsCardRightDesc">
+                  <p class="gsCardDescText">
+                    Trying to learn more about the game? You can participate in this short quiz to gain a better understanding which can lead to better build decision making! Click the link below to try it out.
+                  </p>
+                  <div class="gsCardDivider"></div>
+                  <div class="gsCardFooterMeta">
+                    <a href="#" class="gsFootStuff">INFORMATION QUIZ</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+    
+  </div>
+
+  <div class="utilityBar">
+    <div class="utilityBarInner">
+      <div class="utilityBarLeft">
+        <span class="utilityBarIcon">✦</span>
+        <a href="#" class="utilityBarTypeSoul">TYPE SOUL</a>
+        <span class="utilityBarDots"></span>
+        <a href="#aboutSection" class="utilityBarNav">ABOUT</a>
+        <span class="utilityBarDots"></span>
+        <a href="#faqSection" class="utilityBarNav">FREQUENTLY ASKED</a>
+        <span class="utilityBarDots"></span>
+        <a href="#factionHero" class="utilityBarNav">FACTIONS</a>
+        <span class="utilityBarDots"></span>
+        <a href="#featuredBuildsSection" class="utilityBarNav">FEATURED BUILDS</a>
+        <span class="utilityBarDots"></span>
+        <span class="utilityBarViewing">INFO</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="aboutSection">
+
+    <div class="aboutCard">
+
+        <div class="lilNavInfoBar">
+            <span class="lilNavInfo">About • <span class="lilNavInfoTypeSoul">Type Soul</span> </span>
+        </div>
+
+        <div class="cardHeaderGroup">
+            <h2>About<br> • Type Soul</h2>
+        </div>
+
+        <div class="cardTextRow">
+            <p>
+               In type soul, you first start out by <a href="#faqCharacterCreation" class="highlightLink">creating your character</a>. You have to pick between the four races: Soul reaper, Arrancars, Quincy or Fullbringers.
+               Each race fits a different play style and you can learn more about races <a href="#racesSection">here</a>. Each race has their different <a href="#factionHero">faction bases</a>
+              . which all have their unique bosses, unique loot and an array of missions. The progression of your character follows : select a <a href="builds.html" target="_blank">build</a> for your <a href="#racesSection">race</a>,
+              then, according to the build, level up your character and put in the correct stats. Once you are "Semi Grade 2" level, you are able to unlock your <a href="#faqElements" class="highlightLink">element</a>.
+              The next step of your progression is the hardest, once you are max level, you are able to obtain <a href="#faqFullMode" class="highlightLink">full mode</a>. Your full mode enables you to change the tide of a battle
+              with a single button. However, the quest to obtain it has caused many casuals to forfeit. <br>
+              
+            <span class="cardTextWarning">WARNING! THIS GAME IS UNFORGIVING TO NEW PLAYERS SO DO NOT EXPECT AN EASY PROGRESSION. A KNOWN CULTURE IN THIS GAME IS
+              "FRESHIE GANKING" WHICH REFERS TO THE KILLING OF NEW PLAYERS.
+            </span>
+
+            </p>
+            <span class="cardScrollAccent"><span class="scrollDot"></span></span>
+        </div>
+
+        <div class="cardDivider"></div>
+
+        <div class="cardFootStuff">
+            <p class="cardFootInspiration">the road to <i>FULL MODE&nbsp</i> starts here...</p>
+            <p class="cardFootCredit">Made BY <span>JERMEL</span> AND <span>BRYAN</span></p>
+            <p class="cardFootStats">VISITS <span>816.4M+</span> &nbsp;•&nbsp; FAVORITES <span>554,917</span></p>
+        </div>
+
+    </div>
+
+    <aside class="featuredDeveloper">
+
+        <div class="devTopNav">
+            <span class="navLinks">MEET THE DEVELOPER</span>
+        </div>
+
+        <img src="assets/setro.png" alt="Developer">
+
+        <div class="cardDivider"></div>
+
+        <p class="cardFootCredit">GAME MADE BY <span>SETROBOOMIN</span></p>
+        <span class="devRole">LEAD DEVELOPER</span>
+        <p class="devBlurb">
+            Lead developer of type soul and has had a great impact on it's community
+        </p>
+
+    </aside>
+
+  </section>
+
+  <div class="sectionDividerWrap">
+    <div class="sectionDivider faq">
+      <span class="sectionDividerAccent"></span>
+      <div class="sectionDividerText">
+        <h2 class="sectionDividerTitle">Frequently asked</h2>
+        <p class="sectionDividerSub">12 frequently asked questions to clarify about the game</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="faqSection" id="faqSection">
+
+    <div class="faqCard">
+      <div class="faqHeader">
+        <span class="faQuestion" id="faqCharacterCreation" style="--faqBg: var(--mythicalAizen)">What is the character creation?</span>
+        <div class="faQuestionLine"></div>
+      </div>
+      <div class="faqDescription">
+        <p>
+          In type soul, you start the game with creating your character. You have to
+          choose between 4 races. These <span class="warn">&nbsp;CANNOT&nbsp;</span> be changed
+          later on so be really careful on what you pick.
+        </p>
+      </div>
+    </div>
+
+    <div class="faqCard">
+      <div class="faqHeader">
+        <span class="faQuestion" id="faqElements" style="--faqBg: var(--accentBlue)">What are elements?</span>
+        <div class="faQuestionLine"></div>
+      </div>
+      <div class="faqDescription">
+        <p>
+          Elements are secondary abilities that you use alongside your main skill tree
+          abilities. These help bring your build to its full potential. You can unlock
+          this after half of your progression.
+        </p>
+      </div>
+    </div>
+
+    <div class="faqCard">
+      <div class="faqHeader">
+        <span class="faQuestion" id="faqFullMode" style="--faqBg: var(--mythicalSnow)">What is a Full Mode?</span>
+        <div class="faQuestionLine"></div>
+      </div>
+      <div class="faqDescription">
+        <p>
+          Unlike normal elements, your full mode is not a passive. You have to activate it
+          in order to use it. To unlock this mode, you require a vast amount of progression
+          after you have maxed out your stats/ levels. Your full mode enhances your element.
+        </p>
+      </div>
+    </div>
+
+    <div class="faqCard">
+      <div class="faqHeader">
+        <span class="faQuestion" style="--faqBg: var(--accentRed)">What race to pick?</span>
+        <div class="faQuestionLine"></div>
+      </div>
+      <div class="faqDescription">
+        <p>
+          Each race has their own different playstyles. In order to find out what
+          suits your playstyle, you can use <a href="#racesSection">&nbsp;this&nbsp;</a> as a guide.
+        </p>
+      </div>
+    </div>
+
+    <div class="faqCard">
+      <div class="faqHeader">
+        <span class="faQuestion"style="--faqBg: var(--fullbringer)">What is a skill tree?</span>
+        <div class="faQuestionLine"></div>
+      </div>
+      <div class="faqDescription">
+        <p>
+          There are 7 skill trees in the game. Each will enable you to different
+          abilities and passives. Every skill tree is unique to different playstyles.
+          You are able to go more than 1 skill tree, allowing for diverse builds.
+        </p>
+      </div>
+    </div>
+
+    <div class="faqCard">
+      <div class="faqHeader">
+        <span class="faQuestion"style="--faqBg: var(--arrancar)">What is a build?</span>
+        <div class="faQuestionLine"></div>
+      </div>
+      <div class="faqDescription">
+        <p>
+          A Build comprises of the stats you put into a skill tree along side
+          your element. Each build suits a different playstyle.
+          You can use<a href="builds.html">&nbsp;this&nbsp;</a> to choose your build
+          or maybe even create your own build.
+        </p>
+      </div>
+    </div>
+
+    <div class="faqCard">
+      <div class="faqHeader">
+        <span class="faQuestion" style="--faqBg: var(--accentBlue)">What are factions?</span>
+        <div class="faQuestionLine"></div>
+      </div>
+      <div class="faqDescription">
+        <p>
+          A faction is the primary base your race uses. Each faction has unique features
+          such as bosses, clothing items and drops. You are able to enter different
+          faction bases if you enter their portal. This allows for "ganks". You can
+          check out factions <a href="#factionHero">&nbsp;here&nbsp;</a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="faqCard">
+      <div class="faqHeader">
+        <span class="faQuestion"style="--faqBg: var(--mythicalSnow)">What is a gank?</span>
+        <div class="faQuestionLine"></div>
+      </div>
+      <div class="faqDescription">
+        <p>
+          A gank is when many players, 2 or more groups of players continuously
+          attack each other. This is primarily seen during faction raids. Its
+          best to avoid ganks as a new player as will lose money that you need to
+          progress and you might lose loot.
+        </p>
+      </div>
+    </div>
+
+     <div class="faqCard">
+      <div class="faqHeader">
+        <span class="faQuestion"style="--faqBg: var(--mythicalChess)">What is a faction raid?</span>
+        <div class="faQuestionLine"></div>
+      </div>
+      <div class="faqDescription">
+        <p>
+          Every other hour, a raid will happen in every faction base. This allows the
+          home faction to fight off opposing factions that are in their base. The winner
+          will earn various loot items and supply caches will drop. These caches are
+          avaliable to all, even the losing factions so be quick!
+        </p>
+      </div>
+    </div>
+
+    <div class="faqCard">
+      <div class="faqHeader">
+        <span class="faQuestion"style="--faqBg: var(--arrancar)">What is a cheese build?</span>
+        <div class="faQuestionLine"></div>
+      </div>
+      <div class="faqDescription">
+        <p>
+          A cheese build is basically when your build requires no skill to play
+          or has a gimmick that makes it very strong and annoying to fight against.
+          As a new player, its perfectly fine to play cheese. However, as you progress,
+          its more respectable to play skillful builds.
+        </p>
+      </div>
+    </div>
+
+    <div class="faqCard">
+      <div class="faqHeader">
+        <span class="faQuestion" id="faqCheese" style="--faqBg: var(--fullbringer)">What is a cheese build?</span>
+        <div class="faQuestionLine"></div>
+      </div>
+      <div class="faqDescription">
+        <p>
+          A cheese build is basically when your build requires no skill to play
+          or has a gimmick that makes it very strong and annoying to fight against.
+          As a new player, its perfectly fine to play cheese. However, as you progress,
+          its more respectable to play skillful builds.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="sectionDividerWrap">
+    <div class="sectionDivider faction">
+      <span class="sectionDividerAccent"></span>
+      <div class="sectionDividerText">
+        <h2 class="sectionDividerTitle">Factions</h2>
+        <p class="sectionDividerSub">FOUR RACES. CHOOSE THE ONE THAT CALLS OUT TO YOU.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="factionHero" id="factionHero" style="background-image: url('assets/factions/soulSociety.png');">
+    <div class="factionHeroOverlay"></div>
+
+    <button class="factionHeroArrow factionHeroArrowLeft" id="factionPrevBtn" aria-label="Previous faction">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <div class="factionHeroContent">
+      <span class="factionHeroMark">✦</span>
+      <h2 class="factionHeroName" id="factionHeroName"></h2>
+      <span class="factionHeroCategory" id="factionHeroCategory"></span>
+      <p class="factionHeroTagline" id="factionHeroTagline"></p>
+      <span class="factionHeroRule"></span>
+      <p class="factionHeroDesc" id="factionHeroDesc">
+      </p>
+    </div>
+
+    <button class="factionHeroArrow factionHeroArrowRight" id="factionNextBtn" aria-label="Next faction">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <div class="factionHeroDots" id="factionHeroDots"></div>
+  </section>
+
+  <div class="sectionDividerWrap">
+    <div class="sectionDivider featured">
+      <span class="sectionDividerAccent"></span>
+      <div class="sectionDividerText">
+        <h2 class="sectionDividerTitle">Featured Builds</h2>
+        <p class="sectionDividerSub">Check this out for the best beginner friendly builds</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="featuredBuildsSection" id="featuredBuildsSection">
+    <div class="fbCardsGrid">
+
+      <div class="fbCard">
+        <div class="fbCardTopSection">
+          <span class="fbCardBadge beginner">BEGINNER</span>
+          <div class="fbCardTags">
+            <span>SPAM</span> • <span>MELEE</span> • <span>PVP</span> • <span>BURST</span>
+          </div>
+        </div>
+
+        <div class="fbCardBody">
+          <div class="fbCardMainInfo">
+            <h3 class="fbCardTitle quincy">QUINCY<br>FULL SPEED</h3>
+          </div>
+
+          <div class="fbCardContentRow">
+            <div class="fbCardLeftMeta">
+              
+              <div class="fbCardAvatar quincy"><img src="assets/setro.png" alt="Avatar"></div>
+
+              <div class="fbCardDots"></div>
+              <div class="fbMetaStat">
+                <span class="fbMetaLabel">LIKES</span>
+                <span class="fbMetaVal">22k+ LIKED</span>
+              </div>
+              <div class="fbMetaStat">
+                <span class="fbMetaLabel">FAVORITES</span>
+                <span class="fbMetaVal">18k+ FAVORITED</span>
+              </div>
+            </div>
+
+            <div class="fbCardRightDesc">
+              <p class="fbCardDescText">
+                New to type soul? This is a beginner friendly build where
+                you burst damage quickly while getting a better understanding
+                of the PVP in type soul. Speed is a skill tree which allows you
+                to blend moves one after another seemlessly allowing for fast combos
+                that do a lot of damage. Speed is very reliant on constant pressure
+                while enabling very little opportunities for being punished on your mistakes
+              </p>
+              <div class="fbCardDivider"></div>
+              <div class="fbCardFooterMeta">
+                <a href="builds.html?race=quincy&build=02" class="fbFootStuff quincy" target="_blank">QUINCY FULL SPEED</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fbCard">
+        <div class="fbCardTopSection">
+          <span class="fbCardBadge beginner">BEGINNER</span>
+          <div class="fbCardTags">
+            <span>PASSIVE</span> • <span>RANGED</span> • <span>PVE</span> • <span>HIGH DAMAGE</span>
+          </div>
+        </div>
+
+        <div class="fbCardBody">
+          <div class="fbCardMainInfo">
+            <h3 class="fbCardTitle sr">SOUL REAPER<br>KIDO HYBRID</h3>
+          </div>
+
+          <div class="fbCardContentRow">
+            <div class="fbCardLeftMeta">
+              
+              <div class="fbCardAvatar sr"><img src="assets/setro.png" alt="Avatar"></div>
+
+              <div class="fbCardDots"></div>
+              <div class="fbMetaStat">
+                <span class="fbMetaLabel">LIKES</span>
+                <span class="fbMetaVal">38k+ LIKED</span>
+              </div>
+              <div class="fbMetaStat">
+                <span class="fbMetaLabel">FAVORITES</span>
+                <span class="fbMetaVal">27k+ FAVORITED</span>
+              </div>
+            </div>
+
+            <div class="fbCardRightDesc">
+              <p class="fbCardDescText">
+                Not looking for PVP? If you are looking for a PVE alternative, this build
+                is perfect! Soul Reaper Kido helps you learn bosses's attack patterns while
+                still doing high damage. This build is ranged, allowing you to play passive
+                and focus on ranging bosses. Kido also allows for high sustain moves, allowing
+                you to iframe many attacks and stay safe.
+              </p>
+              <div class="fbCardDivider"></div>
+              <div class="fbCardFooterMeta">
+                <a href="builds.html?race=sr&build=04" class="fbFootStuff sr" target="_blank">SR KIDO</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fbCard">
+        <div class="fbCardTopSection">
+          <span class="fbCardBadge beginner">BEGINNER</span>
+          <div class="fbCardTags">
+            <span>SPAM</span> • <span>CLOSE</span> • <span>PVP</span> • <span>BURST+</span>
+          </div>
+        </div>
+
+        <div class="fbCardBody">
+          <div class="fbCardMainInfo">
+            <h3 class="fbCardTitle fullbringer">FULLBRINGER<br>HAKUDA HYBRID</h3>
+          </div>
+
+          <div class="fbCardContentRow">
+            <div class="fbCardLeftMeta">
+              
+              <div class="fbCardAvatar fullbringer"><img src="assets/setro.png" alt="Avatar"></div>
+
+              <div class="fbCardDots"></div>
+              <div class="fbMetaStat">
+                <span class="fbMetaLabel">LIKES</span>
+                <span class="fbMetaVal">43k+ LIKED</span>
+              </div>
+              <div class="fbMetaStat">
+                <span class="fbMetaLabel">FAVORITES</span>
+                <span class="fbMetaVal">37k+ FAVORITED</span>
+              </div>
+            </div>
+
+            <div class="fbCardRightDesc">
+              <p class="fbCardDescText">
+                Slowing improving at PVP? If you are looking for a higher damage
+                option this build is perfect! While not as forgiving as full speed,
+                this build allows you to burst EVEN more damage. The close ranged
+                aspect of hakuda is the main problem as to why many stray away. However,
+                using various fullbringer elements, you are able to counter the close ranged
+                aspect, allowing you to <a href="#faqCheese" class="highlightLink">cheese</a> opponents
+              </p>
+              <div class="fbCardDivider"></div>
+              <div class="fbCardFooterMeta">
+                <a href="builds.html?race=fullbringer&build=01" class="fbFootStuff fullbringer" target="_blank">FULLBRINGER HAKUDA HYBRID</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fbCard">
+        <div class="fbCardTopSection">
+          <span class="fbCardBadge intermediate">INTERMEDIATE</span>
+          <div class="fbCardTags">
+            <span>PRESSURE</span> • <span>MELEE</span> • <span>PVP</span> • <span>BURST</span>
+          </div>
+        </div>
+
+        <div class="fbCardBody">
+          <div class="fbCardMainInfo">
+            <h3 class="fbCardTitle quincy">QUINCY<br>SPEED HYBRID</h3>
+          </div>
+
+          <div class="fbCardContentRow">
+            <div class="fbCardLeftMeta">
+              
+              <div class="fbCardAvatar quincy"><img src="assets/setro.png" alt="Avatar"></div>
+
+              <div class="fbCardDots"></div>
+              <div class="fbMetaStat">
+                <span class="fbMetaLabel">LIKES</span>
+                <span class="fbMetaVal">39k+ LIKED</span>
+              </div>
+              <div class="fbMetaStat">
+                <span class="fbMetaLabel">FAVORITES</span>
+                <span class="fbMetaVal">32k+ FAVORITED</span>
+              </div>
+            </div>
+
+            <div class="fbCardRightDesc">
+              <p class="fbCardDescText">
+                If you're slowly learning the other skill trees, this build is perfect
+                for you! This build incorporates speed and kendo, allowing for a variety
+                of mixups. Whilst being harder than full speed and not doing as much damage,
+                you are able to sustain yourself longer and maintain more health during
+                prolonged battles. This build will help you get better at many mechanics.
+              </p>
+              <div class="fbCardDivider"></div>
+              <div class="fbCardFooterMeta">
+                <a href="builds.html?race=quincy&build=03" class="fbFootStuff quincy" target="_blank">QUINCY SPEED HYBRID</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fbCard">
+        <div class="fbCardTopSection">
+          <span class="fbCardBadge advanced">ADVANCED</span>
+          <div class="fbCardTags">
+            <span>PRESSURE+</span> • <span>CLOSE</span> • <span>PVP</span> • <span>HIGH DAMAGE</span>
+          </div>
+        </div>
+
+        <div class="fbCardBody">
+          <div class="fbCardMainInfo">
+            <h3 class="fbCardTitle arrancar">ARRANCAR<br>HAKUDA HYBRID</h3>
+          </div>
+
+          <div class="fbCardContentRow">
+            <div class="fbCardLeftMeta">
+              
+              <div class="fbCardAvatar arrancar"><img src="assets/setro.png" alt="Avatar"></div>
+
+              <div class="fbCardDots"></div>
+              <div class="fbMetaStat">
+                <span class="fbMetaLabel">LIKES</span>
+                <span class="fbMetaVal">18k+ LIKED</span>
+              </div>
+              <div class="fbMetaStat">
+                <span class="fbMetaLabel">FAVORITES</span>
+                <span class="fbMetaVal">12k+ FAVORITED</span>
+              </div>
+            </div>
+
+            <div class="fbCardRightDesc">
+              <p class="fbCardDescText">
+                Are you confident in your abilities? Running this build will be a testament
+                to that. With arrancar hakuda, you do not get the better elements that fullbringer
+                has. However, against better players, arrancar has better elements that will catch
+                them off guard more easily. The close ranged aspect makes hakuda very hard to play
+                as you need to learn the moves of many skill trees beforehand.
+              </p>
+              <div class="fbCardDivider"></div>
+              <div class="fbCardFooterMeta">
+                <a href="builds.html?race=arrancar&build=03" class="fbFootStuff arrancar" target="_blank">ARRANCAR HAKUDA HYBRID</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fbCard">
+        <div class="fbCardTopSection">
+          <span class="fbCardBadge master">MASTER</span>
+          <div class="fbCardTags">
+            <span>PUNISH/ SHUTDOWN</span> • <span>CLOSE</span> • <span>PVP</span> • <span>COUNTER</span>
+          </div>
+        </div>
+
+        <div class="fbCardBody">
+          <div class="fbCardMainInfo">
+            <h3 class="fbCardTitle sr">SOUL REAPER<br>KENDO HYBRID</h3>
+          </div>
+
+          <div class="fbCardContentRow">
+            <div class="fbCardLeftMeta">
+              
+              <div class="fbCardAvatar sr"><img src="assets/setro.png" alt="Avatar"></div>
+
+              <div class="fbCardDots"></div>
+              <div class="fbMetaStat">
+                <span class="fbMetaLabel">LIKES</span>
+                <span class="fbMetaVal">14k+ LIKED</span>
+              </div>
+              <div class="fbMetaStat">
+                <span class="fbMetaLabel">FAVORITES</span>
+                <span class="fbMetaVal">9k+ FAVORITED</span>
+              </div>
+            </div>
+
+            <div class="fbCardRightDesc">
+              <p class="fbCardDescText">
+                If you are running this build, make sure you know atleast 75% of the moves
+                because to play kendo, you need to know how to punish plays. Kendo applies
+                a special effect called "cripple" which disable opponents flashsteps. The
+                playstyle of kendo follows: Punish opponents plays > Cripple > Combo. While
+                kendo does not have many burst options, with the right plays, you are still able
+                to do high damage.
+              </p>
+              <div class="fbCardDivider"></div>
+              <div class="fbCardFooterMeta">
+                <a href="builds.html?race=sr&build=01" class="fbFootStuff sr" target="_blank">SR KENDO HYBRID</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <script src="home.js"></script>
+
+</body>
+</html>

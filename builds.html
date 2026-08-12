@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Type Soul - Build Guide</title>
+  <link rel="stylesheet" href="builds.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+  <header class="headerNav">
+    <div class="navContainer">
+        <a href="home.html" class="navHomeIcon">
+            <i class="fa-solid fa-house"></i>
+        </a>
+
+        <nav class="mainNav">
+            <a href="builds.html">
+                <i class="fa-solid fa-scroll"></i> 
+                Guides 
+            </a>
+
+            <a href="game-info.html">
+                <i class="fa-solid fa-circle-info"></i>
+                Game Info
+            </a>
+
+            <a href="fun-facts.html" class="active">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                Fun Facts
+            </a>
+
+            <a href="discord.html">
+                <i class="fa-solid fa-people-group"></i>
+                Community
+            </a>
+        
+      </nav>
+    </div>
+  </header>
+  <!-- HERO SECTION (Image 1 Style) -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <p class="sub-header">BUILD GUIDES</p>
+      <h1 class="hero-title">TYPE SOUL</h1>
+    </div>
+  </section>
+
+  <section class="intro-section">
+    <div class="intro-container">
+      <div class="intro-header">
+        <i class="fa-solid fa-butterfly butterfly-icon"></i>
+        <h2>Intro</h2>
+      </div>
+      <div class="intro-grid">
+        <p class="intro-text">
+          Welcome to the ultimate Type Soul Build Guide! Here you can explore top-tier builds customized for each faction. Select a race below to view statutory recommendations, skill trees, and meta equipment to maximize your combat performance in the field.
+        </p>
+        <p class="intro-text">
+          Check back regularly for updated meta strategies and community patch summaries to keep your character optimized for every update.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RACE SELECTION & BUILDS SECTION (Image 2 Style) -->
+  <section class="races-section" id="racesSection">
+    <div class="race-banner">
+      <h1 class="race-title" id="display-title">SOUL REAPER</h1>
+      <p class="race-subtitle" id="display-subtitle">4 RACES • OPTIMIZED BUILDS</p>
+    </div>
+
+    <!-- 4 Race Cards -->
+    <div class="race-grid">
+      <div class="race-card active" onclick="selectRace('sr', event)">
+        <div class="img-wrapper">
+          <img src="assets/type.png" alt="Soul Reaper">
+        </div>
+        <span>SOUL REAPER</span>
+      </div>
+
+      <div class="race-card" onclick="selectRace('arrancar', event)">
+        <div class="img-wrapper">
+          <img src="assets/type3.png" alt="Arrancar">
+        </div>
+        <span>ARRANCAR</span>
+      </div>
+
+      <div class="race-card" onclick="selectRace('quincy', event)">
+        <div class="img-wrapper">
+          <img src="assets/type2.png" alt="Quincy">
+        </div>
+        <span>QUINCY</span>
+      </div>
+
+
+
+      <div class="race-card" onclick="selectRace('fullbringer', event)">
+        <div class="img-wrapper">
+          <img src="assets/type4.png" alt="Fullbringer">
+        </div>
+        <span>FULLBRINGER</span>
+      </div>
+    </div>
+
+    <div class="builds-container" id="builds-list">
+    </div>
+    
+  </section>
+
+  <script src="builds.js"></script>
+</body>
+</html>
